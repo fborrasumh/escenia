@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0F2237">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: blob:; media-src blob: data:; connect-src https://api.openai.com https://generativelanguage.googleapis.com https://api.anthropic.com; worker-src blob: https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: blob:; media-src blob: data:; connect-src https://api.openai.com https://generativelanguage.googleapis.com https://api.anthropic.com https://commons.wikimedia.org https://upload.wikimedia.org; worker-src blob: https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'">
 <meta name="author" content="Fernando Borrás Rocher">
 <meta name="description" content="Charlas como beats, no como diapositivas">
 <title>EscenIA · Charlas como beats, no como diapositivas</title><link rel="preconnect" href="https://fonts.googleapis.com">
@@ -404,6 +404,16 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 .fa-res{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}.fa-res .fa-chip{font-size:12.5px}
 .fa-lista{margin:6px 0 0;padding-left:18px;font-size:13.5px;line-height:1.55}
 @media(max-width:900px){.grid2[style]{grid-template-columns:minmax(0,1fr)!important}}
+/* colores e imágenes */
+.fa-presets{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.fa-presets button{display:inline-flex;align-items:center;gap:5px;font:600 12px var(--texto);padding:5px 9px;border-radius:8px;border:1.5px solid var(--linea);background:#fff;color:var(--acero);cursor:pointer}.fa-presets button:hover{border-color:var(--brasa)}.fa-presets i{display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.2)}
+.fa-color{width:100%;height:42px;padding:2px;border:1.5px solid var(--linea);border-radius:10px;background:#fff;cursor:pointer}
+.fa-prev{display:flex;align-items:center;gap:14px;border-radius:14px;padding:18px 20px;border:1px solid var(--linea);margin-top:6px}.fa-prev b{font:800 40px var(--display)}.fa-prev span{font:600 17px var(--texto)}.fa-prev i{margin-left:auto;width:36px;height:36px;border-radius:50%}
+.im-row{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--linea-2)}.im-th{flex:none;width:58px;height:78px;border-radius:10px;overflow:hidden;background:var(--papel);border:1px solid var(--linea);display:grid;place-items:center;color:var(--gris);font-size:22px}.im-th img{width:100%;height:100%;object-fit:cover;display:block}
+.im-m{min-width:0;flex:1}.im-m small{display:block;color:var(--gris);font-size:12.5px;margin:2px 0 6px;overflow-wrap:anywhere}.im-bt{display:flex;flex-wrap:wrap;gap:5px}.im-bt button,.im-bt select{font:600 12px var(--texto);padding:5px 8px;border-radius:8px;border:1.5px solid var(--linea);background:#fff;color:var(--acero);cursor:pointer}.im-bt button:hover{border-color:var(--brasa);color:var(--brasa-osc)}
+.fa-q{display:flex;gap:8px}.fa-q input{flex:1;min-width:0;padding:10px 12px;border:1.5px solid var(--linea);border-radius:10px;font:15px var(--texto)}
+.fa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px}.fa-cand{display:block;text-align:left;border:1.5px solid var(--linea);border-radius:12px;background:#fff;padding:6px;cursor:pointer}.fa-cand:hover{border-color:var(--brasa)}.fa-cimg{display:block;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:var(--papel)}.fa-cimg img{width:100%;height:100%;object-fit:cover;display:block}.fa-cand small{display:block;font-size:11.5px;color:var(--gris);margin-top:5px;overflow-wrap:anywhere}
+
+.im-bt select{width:auto;max-width:100%}
 </style></head>
 <body>
 <svg style="display:none" aria-hidden="true">
@@ -495,7 +505,7 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 
 <!-- 1 · MATERIAL -->
 <section class="screen" data-step="1">
-  <header class="sh" style="--c:#6B4FD8"><div class="sh-ico"><svg class="i"><use href="#i-pencil"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 4</p><h2 data-i18n="s.material">Tu material</h2><p class="sh-lede" data-i18n="s.material.lede">Si ya tienes un texto, un Word, un PDF o un PowerPoint, la IA propone el guion y el código comprueba que no inventa nada. Si prefieres escribirlo tú, empieza en blanco.</p></div></header>
+  <header class="sh" style="--c:#6B4FD8"><div class="sh-ico"><svg class="i"><use href="#i-pencil"/></svg></div><div><p class="sh-step" data-i18n="s.paso1">Paso 1 de 5</p><h2 data-i18n="s.material">Tu material</h2><p class="sh-lede" data-i18n="s.material.lede">Si ya tienes un texto, un Word, un PDF o un PowerPoint, la IA propone el guion y el código comprueba que no inventa nada. Si prefieres escribirlo tú, empieza en blanco.</p></div></header>
   <div class="card"><div class="field"><label for="material" data-i18n="s.mat.lbl">Material de partida (opcional)</label><textarea id="material" rows="9" placeholder="Pega aquí el texto de tu charla…" data-i18n-attr="placeholder:s.mat.ph"></textarea></div>
     <div class="actions"><label class="btn btn-ghost" for="fileMat" style="cursor:pointer"><svg class="i"><use href="#i-upload"/></svg><span data-i18n="s.mat.file">Subir Word, PDF, PowerPoint o texto</span></label><input type="file" id="fileMat" accept=".docx,.pdf,.pptx,.txt,.md" hidden><span class="help" id="matInfo" style="align-self:center"></span></div></div>
   <div class="card"><h3 data-i18n="s.gen.h">Guion de partida</h3>
@@ -505,7 +515,7 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
 
 <!-- 2 · GUION -->
 <section class="screen" data-step="2">
-  <header class="sh" style="--c:#E4572E"><div class="sh-ico"><svg class="i"><use href="#i-doc"/></svg></div><div><p class="sh-step" data-i18n="s.paso2">Paso 2 de 4</p><h2 data-i18n="s.guion">Tu guion</h2><p class="sh-lede" data-i18n="s.guion.lede">Una línea por bloque. «==» abre una escena, «--» pasa al siguiente beat y «---» pasa a un beat que borra lo anterior.</p></div></header>
+  <header class="sh" style="--c:#E4572E"><div class="sh-ico"><svg class="i"><use href="#i-doc"/></svg></div><div><p class="sh-step" data-i18n="s.paso2">Paso 2 de 5</p><h2 data-i18n="s.guion">Tu guion</h2><p class="sh-lede" data-i18n="s.guion.lede">Una línea por bloque. «==» abre una escena, «--» pasa al siguiente beat y «---» pasa a un beat que borra lo anterior.</p></div></header>
   <div class="grid2" style="grid-template-columns:minmax(0,3fr) minmax(0,2fr)">
     <div class="card"><div class="fa-sns" id="sns"></div><div class="field"><label for="guion" data-i18n="s.guion.lbl">Guion</label><textarea id="guion" class="fa-code" rows="22" spellcheck="false"></textarea></div>
       <details class="fa-det"><summary data-i18n="s.sint">Cómo se escribe</summary><div data-i18n="s.sint.cuerpo"><p>Una línea por bloque:</p><pre>== Título de la escena
@@ -531,17 +541,38 @@ fuente: «cita literal del material»
   </div>
 </section>
 
-<!-- 3 · ESCENARIO -->
+<!-- 3 · ASPECTO: colores e imágenes -->
 <section class="screen" data-step="3">
-  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-monitor"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 4</p><h2 data-i18n="s.escenario">Escenario</h2><p class="sh-lede" data-i18n="s.escenario.lede">Pasa los beats con → o con un clic. O abre la vista general, P el presentador, B el apagón, F la pantalla completa.</p></div></header>
+  <header class="sh" style="--c:#C98200"><div class="sh-ico"><svg class="i"><use href="#i-sparkles"/></svg></div><div><p class="sh-step" data-i18n="s.paso3">Paso 3 de 5</p><h2 data-i18n="s.aspecto">Colores e imágenes</h2><p class="sh-lede" data-i18n="s.aspecto.lede">Elige los colores de fondo y de texto y pon al menos una imagen en cada escena: generada con IA, libre de derechos o tuya.</p></div></header>
+  <div class="grid2" style="grid-template-columns:minmax(0,2fr) minmax(0,3fr)">
+    <div class="card"><h3 data-i18n="s.col">Colores</h3>
+      <div class="fa-presets" id="presets"></div>
+      <div class="grid3"><div class="field"><label for="colFondo" data-i18n="s.col.fondo">Fondo</label><input type="color" id="colFondo" class="fa-color"></div><div class="field"><label for="colTexto" data-i18n="s.col.texto">Texto</label><input type="color" id="colTexto" class="fa-color"></div><div class="field"><label for="colAcento" data-i18n="s.col.acento">Acento</label><input type="color" id="colAcento" class="fa-color"></div></div>
+      <div class="fa-prev" id="colPrev" aria-hidden="true"></div><div id="colInfo" style="margin-top:10px"></div>
+      <div class="actions"><button class="btn btn-ghost btn-sm" id="btnColReset" type="button" data-i18n="s.col.reset">Usar los colores del tema</button></div></div>
+    <div class="card"><h3 data-i18n="s.imgs">Imágenes de las escenas</h3>
+      <p class="help" data-i18n="s.imgs.help">Cada escena lleva una imagen que se queda con ella en todos sus beats. Se incrustan en la charla exportada, que sigue funcionando sin conexión.</p>
+      <div class="field"><label for="imgOrigen" data-i18n="s.img.origen">Origen de las imágenes nuevas</label><select id="imgOrigen"></select></div>
+      <div id="imgIA"><div class="grid2"><div class="field"><label for="imgProv" data-i18n="s.img.prov">Proveedor</label><select id="imgProv"></select></div><div class="field"><label for="imgModelo" data-i18n="s.img.modelo">Modelo de imagen</label><input type="text" id="imgModelo" list="imgModelos"><datalist id="imgModelos"></datalist></div></div>
+        <div class="grid2"><div class="field"><label for="imgEstilo" data-i18n="s.img.estilo">Estilo</label><input type="text" id="imgEstilo" placeholder="ilustración editorial limpia" data-i18n-attr="placeholder:s.img.estilo.ph"></div><div class="field"><label for="imgPrecio" data-i18n="s.img.precio">Precio por imagen (opcional, en $)</label><input type="text" id="imgPrecio" inputmode="decimal" placeholder="0.005"></div></div>
+        <p class="help" data-i18n="s.img.ayuda">Se usa el modelo más económico de cada proveedor, editable. Claude (Anthropic) no genera imágenes. Consulta el precio vigente de tu modelo: cada imagen es una llamada de pago a tu cuenta.</p></div>
+      <div class="actions"><button class="btn btn-primary" id="btnImgTodas" type="button"><svg class="i"><use href="#i-sparkles"/></svg><span id="btnImgTodasTxt"></span></button></div><p class="help" id="imgEstado" role="status"></p>
+      <div id="imgLista"></div></div>
+  </div>
+  <input type="file" id="fileImgEsc" accept="image/*" hidden>
+</section>
+
+<!-- 4 · ESCENARIO -->
+<section class="screen" data-step="4">
+  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-monitor"/></svg></div><div><p class="sh-step" data-i18n="s.paso4">Paso 4 de 5</p><h2 data-i18n="s.escenario">Escenario</h2><p class="sh-lede" data-i18n="s.escenario.lede">Pasa los beats con → o con un clic. O abre la vista general, P el presentador, B el apagón, F la pantalla completa.</p></div></header>
   <div class="card"><div id="stageHost"></div></div>
   <div class="card"><h3 data-i18n="s.verif">Comprobar la charla</h3><p class="help" data-i18n="s.verif.help">Recorre cada beat hacia delante, hacia atrás, saltando directamente y recargando desde su dirección, y comprueba que el fotograma es idéntico. También detecta texto que se sale del escenario.</p>
     <div class="actions" style="margin-top:0"><button class="btn btn-primary" id="btnVerifica" type="button"><svg class="i"><use href="#i-check"/></svg><span data-i18n="s.verif.btn">Comprobar</span></button></div><div id="verifRes" style="margin-top:12px"></div></div>
 </section>
 
-<!-- 4 · EXPORTAR -->
-<section class="screen" data-step="4">
-  <header class="sh" style="--c:#1F6FB2"><div class="sh-ico"><svg class="i"><use href="#i-download"/></svg></div><div><p class="sh-step" data-i18n="s.paso4">Paso 4 de 4</p><h2 data-i18n="s.exportar">Exportar</h2><p class="sh-lede" data-i18n="s.exportar.lede">La charla sale como un único fichero HTML que funciona sin conexión, con vista de presentador. Antes, revisa la auditoría de contenido.</p></div></header>
+<!-- 5 · EXPORTAR -->
+<section class="screen" data-step="5">
+  <header class="sh" style="--c:#1F6FB2"><div class="sh-ico"><svg class="i"><use href="#i-download"/></svg></div><div><p class="sh-step" data-i18n="s.paso5">Paso 5 de 5</p><h2 data-i18n="s.exportar">Exportar</h2><p class="sh-lede" data-i18n="s.exportar.lede">La charla sale como un único fichero HTML que funciona sin conexión, con vista de presentador. Antes, revisa la auditoría de contenido.</p></div></header>
   <div class="card"><h3 data-i18n="s.aud">Auditoría de contenido</h3><div id="audRes"></div></div>
   <div class="card"><h3 data-i18n="Descargar">Descargar</h3><div class="actions" style="margin-top:0"><button class="btn btn-primary" id="btnHtml" type="button"><svg class="i"><use href="#i-monitor"/></svg><span data-i18n="s.exp.html">Charla autónoma (.html)</span></button><button class="btn btn-word" id="btnWord" type="button"><svg class="i"><use href="#i-doc"/></svg><span data-i18n="s.exp.word">Notas en Word</span></button><button class="btn btn-ghost" id="btnJson" type="button" data-i18n="s.exp.json">Proyecto (.json)</button><button class="btn btn-ghost" id="btnTxt" type="button" data-i18n="s.exp.txt">Guion (.txt)</button></div><div id="offRes" style="margin-top:12px"></div></div>
   <div class="card"><h3 data-i18n="s.imp">Importar un guion</h3><p class="help" data-i18n="s.imp.help">Abre un proyecto .json exportado antes o un guion en texto. Sustituye el guion actual.</p><div class="actions" style="margin-top:0"><label class="btn btn-ghost" for="fileImp" style="cursor:pointer"><svg class="i"><use href="#i-upload"/></svg><span data-i18n="s.imp.btn">Importar .json o .txt</span></label><input type="file" id="fileImp" accept=".json,.txt,.md" hidden></div></div>
@@ -558,6 +589,7 @@ fuente: «cita literal del material»
   <div class="actions"><button class="btn btn-ghost btn-sm" id="btnModelos" type="button" data-i18n="Ver los modelos de mi clave">Ver los modelos de mi clave</button></div>
   <p class="help" id="iaEstado" data-i18n="f.ia.ayuda">La clave se guarda solo en este navegador y se envía únicamente a tu proveedor. Cada persona usa la suya y paga su propio uso. Elige un modelo económico: este uso no necesita el más potente.</p></div></div></div>
 <div class="modal" id="mEnvio" role="dialog" aria-modal="true" aria-labelledby="mEnT"><div class="modal-box"><div class="modal-head"><h2 id="mEnT" data-i18n="Esto es lo que saldría hacia tu proveedor de IA">Esto es lo que saldría hacia tu proveedor de IA</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div id="envioInfo"></div><pre class="fa-pre" id="envioTxt"></pre><label class="fa-chk" style="margin:12px 0"><input type="checkbox" id="envioOk"> <span data-i18n="f.envio.chk">He revisado la muestra y confirmo que puede salir de mi ordenador.</span></label><div class="actions"><button class="btn btn-primary" id="envioSi" type="button" disabled data-i18n="s.enviar">Enviar y analizar</button><button class="btn btn-ghost" id="envioNo" type="button" data-i18n="Cancelar">Cancelar</button></div></div></div></div>
+<div class="modal" id="mImg" role="dialog" aria-modal="true" aria-labelledby="mImgT"><div class="modal-box"><div class="modal-head"><h2 id="mImgT" data-i18n="s.img.buscar">Buscar una imagen libre</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><p class="help" data-i18n="s.img.buscar.help">Wikimedia Commons, solo con licencias libres (CC0, dominio público, CC BY y CC BY-SA). La autoría y la licencia se muestran en la diapositiva. Solo se envía tu búsqueda.</p><div class="fa-q"><input type="text" id="imgQ" aria-label="Búsqueda" data-i18n-attr="aria-label:s.img.q"><button class="btn btn-primary btn-sm" id="btnImgQ" type="button" data-i18n="s.img.btnbuscar">Buscar</button></div><p class="help" id="imgBusEstado" role="status"></p><div class="fa-grid" id="imgRes"></div></div></div></div>
 <div class="modal" id="mHelp" role="dialog" aria-modal="true" aria-labelledby="mHelpT"><div class="modal-box"><div class="modal-head"><h2 id="mHelpT" data-i18n="Ayuda">Ayuda</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div class="glos" id="glos"></div></div></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -1055,10 +1087,11 @@ const I18N = {
     's.j3s': 'You step through the beats, check that every frame is reproducible and export an offline HTML.',
     's.zl': '<li>Your material, your script and your talk, stored in this browser</li><li>Your AI key</li><li>The stage, the presenter view, the checks and the export</li>',
     's.zn': '<li>The text of your material, only if you ask the AI for a script, with personal data masked</li><li>Before the first send you see what goes out</li>',
-    's.paso1': 'Step 1 of 4',
-    's.paso2': 'Step 2 of 4',
-    's.paso3': 'Step 3 of 4',
-    's.paso4': 'Step 4 of 4',
+    's.paso1': 'Step 1 of 5',
+    's.paso2': 'Step 2 of 5',
+    's.paso3': 'Step 3 of 5',
+    's.paso4': 'Step 4 of 5',
+    's.paso5': 'Step 5 of 5',
     's.material': 'Your material',
     's.material.lede': 'If you already have a text, a Word, a PDF or a PowerPoint, the AI proposes the script and the code checks that it invents nothing. If you prefer to write it yourself, start blank.',
     's.mat.lbl': 'Starting material (optional)',
@@ -1191,7 +1224,84 @@ const I18N = {
     'Generado con {0}. Inspirada en beatdeck (github.com/borjaperfra/beatdeck).': 'Generated with {0}. Inspired by beatdeck (github.com/borjaperfra/beatdeck).',
     'Ese .json no es un proyecto de EscenIA.': 'That .json is not an EscenIA project.',
     'No se encontró ninguna escena en ese fichero.': 'No scene was found in that file.',
-    'Guion importado': 'Script imported'
+    'Guion importado': 'Script imported',
+    's.aspecto': 'Colors and images',
+    'Aspecto': 'Look',
+    's.aspecto.lede': 'Choose the background and text colours and put at least one image in every scene: AI-generated, free of rights or your own.',
+    's.col': 'Colours',
+    's.col.fondo': 'Background',
+    's.col.texto': 'Text',
+    's.col.acento': 'Accent',
+    's.col.reset': 'Use the theme colours',
+    's.imgs': 'Scene images',
+    's.imgs.help': 'Each scene carries an image that stays with it through all its beats. Images are embedded in the exported talk, which keeps working offline.',
+    's.img.origen': 'Source of new images',
+    's.img.prov': 'Provider',
+    's.img.modelo': 'Image model',
+    's.img.estilo': 'Style',
+    's.img.estilo.ph': 'clean editorial illustration',
+    's.img.precio': 'Price per image (optional, in $)',
+    's.img.ayuda': 'The cheapest model of each provider is used, and you can edit it. Claude (Anthropic) does not generate images. Check the current price of your model: every image is a paid call to your account.',
+    's.img.buscar': 'Search for a free image',
+    's.img.buscar.help': 'Wikimedia Commons, only free licences (CC0, public domain, CC BY and CC BY-SA). The author and licence are shown on the slide. Only your search is sent.',
+    's.img.btnbuscar': 'Search',
+    's.img.q': 'Search',
+    'Imagen libre (Wikimedia Commons)': 'Free image (Wikimedia Commons)',
+    'Generar con IA': 'Generate with AI',
+    'Buscar imagen libre': 'Find a free image',
+    'Subir la mía': 'Upload mine',
+    'Quitar': 'Remove',
+    'Disposición': 'Layout',
+    'Imagen lateral': 'Side image',
+    'Imagen de fondo': 'Background image',
+    'Oscuro': 'Dark',
+    'Claro': 'Light',
+    'Azul noche': 'Night blue',
+    'Papel cálido': 'Warm paper',
+    'Verde bosque': 'Forest green',
+    'Alto contraste': 'High contrast',
+    'Texto de ejemplo': 'Sample text',
+    'Contraste texto/fondo: {0}:1': 'Text/background contrast: {0}:1',
+    'Contraste bajo: se lee mal desde lejos. Se recomienda 4,5:1 o más.': 'Low contrast: hard to read from afar. 4.5:1 or more is recommended.',
+    'El color de acento casi no se distingue del fondo.': 'The accent colour is barely distinguishable from the background.',
+    'Siguiente: aspecto': 'Next: look',
+    'Elige colores y una imagen para cada escena.': 'Choose colours and an image for each scene.',
+    'Completar las {0} escenas sin imagen': 'Complete the {0} scenes without an image',
+    'Todas las escenas tienen imagen': 'Every scene has an image',
+    'Sin imagen': 'No image',
+    'Falta el fichero de la imagen': 'The image file is missing',
+    'Escenas sin imagen: {0}.': 'Scenes without an image: {0}.',
+    'Generada con IA ({0})': 'Generated with AI ({0})',
+    'Ilustración de ejemplo': 'Example illustration',
+    'Imagen propia': 'Own image',
+    'Escena {0}': 'Scene {0}',
+    'Créditos de las imágenes': 'Image credits',
+    'Espera a que termine la operación en curso.': 'Wait for the current operation to finish.',
+    'Ese fichero no es una imagen.': 'That file is not an image.',
+    'Usa solo imágenes sobre las que tengas derechos.': 'Only use images you have the rights to.',
+    'El proveedor rechazó esa imagen por su política de contenido. Cambia el título o el estilo.': 'The provider rejected that image under its content policy. Change the title or the style.',
+    'La IA no devolvió ninguna imagen.': 'The AI returned no image.',
+    'Pega tu clave de {0} para generar imágenes.': 'Paste your {0} key to generate images.',
+    'Se generarán {0} imágenes con {1} ({2}). Cada una es una llamada de pago a tu cuenta.': '{0} images will be generated with {1} ({2}). Each one is a paid call to your account.',
+    'Coste estimado: {0} (según el precio por imagen que has indicado).': 'Estimated cost: {0} (based on the price per image you entered).',
+    'Se envían el título y las ideas de cada diapositiva, no tu material completo.': 'The title and ideas of each slide are sent, not your full material.',
+    'Generando imagen {0} de {1}…': 'Generating image {0} of {1}…',
+    '{0} imágenes generadas con {1}. Revísalas: la IA puede equivocarse.': '{0} images generated with {1}. Review them: the AI can make mistakes.',
+    'Se enviarán estas búsquedas a Wikimedia Commons (no se envía nada más).': 'These searches will be sent to Wikimedia Commons (nothing else is sent).',
+    'Buscando imagen {0} de {1}…': 'Searching image {0} of {1}…',
+    'Sin resultado con licencia libre para las escenas: {0}. Prueba a buscar con otras palabras.': 'No free-licence result for scenes: {0}. Try other words.',
+    'Imágenes libres añadidas. Revísalas y cambia las que no encajen.': 'Free images added. Review them and change any that do not fit.',
+    'No hay conexión con Wikimedia Commons.': 'There is no connection to Wikimedia Commons.',
+    'Buscando…': 'Searching…',
+    '{0} imágenes con licencia libre. Elige una:': '{0} images with a free licence. Pick one:',
+    'Sin resultados con licencia libre. Prueba con otras palabras.': 'No free-licence results. Try other words.',
+    'Imagen añadida: {0}': 'Image added: {0}',
+    'Imágenes y derechos': 'Images and rights',
+    'Las imágenes de IA se generan con tu clave y se marcan como tales en la diapositiva. Las libres vienen de Wikimedia Commons con licencia CC0, dominio público, CC BY o CC BY-SA y muestran autor y licencia; comprueba siempre que cumples sus condiciones. Las que subes son responsabilidad tuya.': 'AI images are generated with your key and are labelled as such on the slide. Free ones come from Wikimedia Commons under CC0, public domain, CC BY or CC BY-SA and show author and licence; always check that you meet their terms. Images you upload are your responsibility.',
+    'Línea {0}: la línea «imagen» necesita un identificador (letras, números, - o _).': 'Line {0}: the “imagen” line needs an identifier (letters, numbers, - or _).',
+    'Escena {0}, beat {1}: falta el fichero de una imagen; vuelve a elegirla en «Colores e imágenes».': 'Scene {0}, beat {1}: an image file is missing; choose it again in “Colors and images”.',
+    'El contraste entre texto y fondo es bajo ({0}:1); se recomienda 4,5:1 o más.': 'The contrast between text and background is low ({0}:1); 4.5:1 or more is recommended.',
+    'El color de acento casi no se distingue del fondo ({0}:1).': 'The accent colour is barely distinguishable from the background ({0}:1).'
   },
   pt: {
     'title': "EscenIA · Palestras em beats, não em diapositivos",
@@ -1210,10 +1320,11 @@ const I18N = {
     's.j3s': 'Passa os beats, verifica que cada fotograma é reproduzível e exporta um HTML sem ligação.',
     's.zl': '<li>O seu material, o seu guião e a sua palestra, guardados neste navegador</li><li>A sua chave de IA</li><li>O palco, o apresentador, as verificações e a exportação</li>',
     's.zn': '<li>O texto do seu material, só se pedir o guião à IA, com os dados pessoais mascarados</li><li>Antes do primeiro envio vê o que sai</li>',
-    's.paso1': 'Passo 1 de 4',
-    's.paso2': 'Passo 2 de 4',
-    's.paso3': 'Passo 3 de 4',
-    's.paso4': 'Passo 4 de 4',
+    's.paso1': 'Passo 1 de 5',
+    's.paso2': 'Passo 2 de 5',
+    's.paso3': 'Passo 3 de 5',
+    's.paso4': 'Passo 4 de 5',
+    's.paso5': 'Passo 5 de 5',
     's.material': 'O seu material',
     's.material.lede': 'Se já tem um texto, um Word, um PDF ou um PowerPoint, a IA propõe o guião e o código verifica que não inventa nada. Se preferir escrevê-lo você mesmo, comece em branco.',
     's.mat.lbl': 'Material de partida (opcional)',
@@ -1346,11 +1457,96 @@ const I18N = {
     'Generado con {0}. Inspirada en beatdeck (github.com/borjaperfra/beatdeck).': 'Gerado com {0}. Inspirada no beatdeck (github.com/borjaperfra/beatdeck).',
     'Ese .json no es un proyecto de EscenIA.': 'Esse .json não é um projeto da EscenIA.',
     'No se encontró ninguna escena en ese fichero.': 'Não foi encontrada nenhuma cena nesse ficheiro.',
-    'Guion importado': 'Guião importado'
+    'Guion importado': 'Guião importado',
+    's.aspecto': 'Cores e imagens',
+    'Aspecto': 'Aspeto',
+    's.aspecto.lede': 'Escolha as cores de fundo e de texto e ponha pelo menos uma imagem em cada cena: gerada com IA, livre de direitos ou sua.',
+    's.col': 'Cores',
+    's.col.fondo': 'Fundo',
+    's.col.texto': 'Texto',
+    's.col.acento': 'Destaque',
+    's.col.reset': 'Usar as cores do tema',
+    's.imgs': 'Imagens das cenas',
+    's.imgs.help': 'Cada cena leva uma imagem que fica com ela em todos os seus beats. As imagens ficam incorporadas na palestra exportada, que continua a funcionar sem ligação.',
+    's.img.origen': 'Origem das imagens novas',
+    's.img.prov': 'Fornecedor',
+    's.img.modelo': 'Modelo de imagem',
+    's.img.estilo': 'Estilo',
+    's.img.estilo.ph': 'ilustração editorial limpa',
+    's.img.precio': 'Preço por imagem (opcional, em $)',
+    's.img.ayuda': 'Usa-se o modelo mais económico de cada fornecedor, editável. O Claude (Anthropic) não gera imagens. Consulte o preço em vigor do seu modelo: cada imagem é uma chamada paga à sua conta.',
+    's.img.buscar': 'Procurar uma imagem livre',
+    's.img.buscar.help': 'Wikimedia Commons, só com licenças livres (CC0, domínio público, CC BY e CC BY-SA). O autor e a licença aparecem no diapositivo. Só é enviada a sua pesquisa.',
+    's.img.btnbuscar': 'Procurar',
+    's.img.q': 'Pesquisa',
+    'Imagen libre (Wikimedia Commons)': 'Imagem livre (Wikimedia Commons)',
+    'Generar con IA': 'Gerar com IA',
+    'Buscar imagen libre': 'Procurar imagem livre',
+    'Subir la mía': 'Carregar a minha',
+    'Quitar': 'Remover',
+    'Disposición': 'Disposição',
+    'Imagen lateral': 'Imagem lateral',
+    'Imagen de fondo': 'Imagem de fundo',
+    'Oscuro': 'Escuro',
+    'Claro': 'Claro',
+    'Azul noche': 'Azul noite',
+    'Papel cálido': 'Papel quente',
+    'Verde bosque': 'Verde floresta',
+    'Alto contraste': 'Alto contraste',
+    'Texto de ejemplo': 'Texto de exemplo',
+    'Contraste texto/fondo: {0}:1': 'Contraste texto/fundo: {0}:1',
+    'Contraste bajo: se lee mal desde lejos. Se recomienda 4,5:1 o más.': 'Contraste baixo: lê-se mal ao longe. Recomenda-se 4,5:1 ou mais.',
+    'El color de acento casi no se distingue del fondo.': 'A cor de destaque quase não se distingue do fundo.',
+    'Siguiente: aspecto': 'Seguinte: aspeto',
+    'Elige colores y una imagen para cada escena.': 'Escolha cores e uma imagem para cada cena.',
+    'Completar las {0} escenas sin imagen': 'Completar as {0} cenas sem imagem',
+    'Todas las escenas tienen imagen': 'Todas as cenas têm imagem',
+    'Sin imagen': 'Sem imagem',
+    'Falta el fichero de la imagen': 'Falta o ficheiro da imagem',
+    'Escenas sin imagen: {0}.': 'Cenas sem imagem: {0}.',
+    'Generada con IA ({0})': 'Gerada com IA ({0})',
+    'Ilustración de ejemplo': 'Ilustração de exemplo',
+    'Imagen propia': 'Imagem própria',
+    'Escena {0}': 'Cena {0}',
+    'Créditos de las imágenes': 'Créditos das imagens',
+    'Espera a que termine la operación en curso.': 'Aguarde que termine a operação em curso.',
+    'Ese fichero no es una imagen.': 'Esse ficheiro não é uma imagem.',
+    'Usa solo imágenes sobre las que tengas derechos.': 'Use apenas imagens sobre as quais tenha direitos.',
+    'El proveedor rechazó esa imagen por su política de contenido. Cambia el título o el estilo.': 'O fornecedor rejeitou essa imagem pela sua política de conteúdo. Mude o título ou o estilo.',
+    'La IA no devolvió ninguna imagen.': 'A IA não devolveu nenhuma imagem.',
+    'Pega tu clave de {0} para generar imágenes.': 'Cole a sua chave de {0} para gerar imagens.',
+    'Se generarán {0} imágenes con {1} ({2}). Cada una es una llamada de pago a tu cuenta.': 'Vão ser geradas {0} imagens com {1} ({2}). Cada uma é uma chamada paga à sua conta.',
+    'Coste estimado: {0} (según el precio por imagen que has indicado).': 'Custo estimado: {0} (segundo o preço por imagem que indicou).',
+    'Se envían el título y las ideas de cada diapositiva, no tu material completo.': 'São enviados o título e as ideias de cada diapositivo, não o seu material completo.',
+    'Generando imagen {0} de {1}…': 'A gerar a imagem {0} de {1}…',
+    '{0} imágenes generadas con {1}. Revísalas: la IA puede equivocarse.': '{0} imagens geradas com {1}. Reveja-as: a IA pode enganar-se.',
+    'Se enviarán estas búsquedas a Wikimedia Commons (no se envía nada más).': 'Estas pesquisas serão enviadas para a Wikimedia Commons (não é enviado mais nada).',
+    'Buscando imagen {0} de {1}…': 'A procurar a imagem {0} de {1}…',
+    'Sin resultado con licencia libre para las escenas: {0}. Prueba a buscar con otras palabras.': 'Sem resultado com licença livre para as cenas: {0}. Tente outras palavras.',
+    'Imágenes libres añadidas. Revísalas y cambia las que no encajen.': 'Imagens livres adicionadas. Reveja-as e mude as que não encaixem.',
+    'No hay conexión con Wikimedia Commons.': 'Não há ligação à Wikimedia Commons.',
+    'Buscando…': 'A procurar…',
+    '{0} imágenes con licencia libre. Elige una:': '{0} imagens com licença livre. Escolha uma:',
+    'Sin resultados con licencia libre. Prueba con otras palabras.': 'Sem resultados com licença livre. Tente outras palavras.',
+    'Imagen añadida: {0}': 'Imagem adicionada: {0}',
+    'Imágenes y derechos': 'Imagens e direitos',
+    'Las imágenes de IA se generan con tu clave y se marcan como tales en la diapositiva. Las libres vienen de Wikimedia Commons con licencia CC0, dominio público, CC BY o CC BY-SA y muestran autor y licencia; comprueba siempre que cumples sus condiciones. Las que subes son responsabilidad tuya.': 'As imagens de IA são geradas com a sua chave e são identificadas como tal no diapositivo. As livres vêm da Wikimedia Commons com licença CC0, domínio público, CC BY ou CC BY-SA e mostram autor e licença; verifique sempre que cumpre as suas condições. As que carrega são da sua responsabilidade.',
+    'Línea {0}: la línea «imagen» necesita un identificador (letras, números, - o _).': 'Linha {0}: a linha «imagen» precisa de um identificador (letras, números, - ou _).',
+    'Escena {0}, beat {1}: falta el fichero de una imagen; vuelve a elegirla en «Colores e imágenes».': 'Cena {0}, beat {1}: falta o ficheiro de uma imagem; escolha-a de novo em «Cores e imagens».',
+    'El contraste entre texto y fondo es bajo ({0}:1); se recomienda 4,5:1 o más.': 'O contraste entre texto e fundo é baixo ({0}:1); recomenda-se 4,5:1 ou mais.',
+    'El color de acento casi no se distingue del fondo ({0}:1).': 'A cor de destaque quase não se distingue do fundo ({0}:1).'
   }
 };
 
 /* ══ Datos de la app: el ejemplo existe en cada idioma (material + guion). Las citas («fuente») están copiadas literalmente de SU material. ══ */
+const svgUrl = x => 'data:image/svg+xml,' + encodeURIComponent(x);
+/* ilustraciones del ejemplo: dibujos propios (SVG), sin derechos de terceros */
+const EJIMG = {
+  'ej-1': {d: svgUrl('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 840"><rect width="620" height="840" fill="#12202F"/><g transform="translate(130 110)"><rect x="40" y="40" width="300" height="220" rx="18" fill="#2C4258"/><rect x="20" y="20" width="300" height="220" rx="18" fill="#3A5873"/><rect width="300" height="220" rx="18" fill="#F1EFE9"/><rect x="30" y="34" width="150" height="14" rx="7" fill="#12202F"/><rect x="30" y="64" width="220" height="10" rx="5" fill="#8B919A"/><rect x="30" y="86" width="190" height="10" rx="5" fill="#8B919A"/></g><path d="M310 420v90M280 480l30 34 30-34" stroke="#E4572E" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/><g fill="#E4572E"><circle cx="150" cy="640" r="28"/><circle cx="250" cy="640" r="28"/><circle cx="350" cy="640" r="28"/><circle cx="450" cy="640" r="28"/></g><g fill="none" stroke="#4CC9B0" stroke-width="6" stroke-linecap="round"><path d="M178 640h44M278 640h44M378 640h44"/></g></svg>'), k: 'ej'},
+  'ej-2': {d: svgUrl('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 840"><rect width="620" height="840" fill="#12202F"/><g fill="#2C4258"><rect x="70" y="150" width="100" height="110" rx="14"/><rect x="190" y="150" width="100" height="110" rx="14"/><rect x="310" y="150" width="100" height="110" rx="14"/><rect x="430" y="150" width="100" height="110" rx="14"/><rect x="70" y="290" width="100" height="110" rx="14"/><rect x="190" y="290" width="100" height="110" rx="14"/><rect x="310" y="290" width="100" height="110" rx="14"/><rect x="430" y="290" width="100" height="110" rx="14"/><rect x="70" y="430" width="100" height="110" rx="14"/><rect x="190" y="430" width="100" height="110" rx="14"/><rect x="430" y="430" width="100" height="110" rx="14"/><rect x="70" y="570" width="100" height="110" rx="14"/><rect x="190" y="570" width="100" height="110" rx="14"/><rect x="310" y="570" width="100" height="110" rx="14"/><rect x="430" y="570" width="100" height="110" rx="14"/></g><rect x="310" y="430" width="100" height="110" rx="14" fill="#E4572E"/><path d="M360 100v680M40 485h540" stroke="#4CC9B0" stroke-width="4" stroke-dasharray="14 12" fill="none"/><circle cx="360" cy="485" r="9" fill="#F1EFE9"/></svg>'), k: 'ej'},
+  'ej-3': {d: svgUrl('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 840"><rect width="620" height="840" fill="#12202F"/><g fill="none" stroke="#F1EFE9" stroke-width="26" stroke-linecap="round"><path d="M110 360a290 290 0 0 1 400 0"/><path d="M170 440a200 200 0 0 1 280 0"/><path d="M230 520a110 110 0 0 1 160 0"/></g><circle cx="310" cy="590" r="24" fill="#F1EFE9"/><path d="M120 190l380 440" stroke="#E4572E" stroke-width="30" stroke-linecap="round"/><path d="M96 215l380 440" stroke="#12202F" stroke-width="12" stroke-linecap="round"/></svg>'), k: 'ej'},
+  'ej-4': {d: svgUrl('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 840"><rect width="620" height="840" fill="#12202F"/><g fill="none" stroke-width="34"><rect x="110" y="230" width="400" height="400" rx="26" stroke="#2C4258"/><rect x="170" y="290" width="280" height="280" rx="20" stroke="#4CC9B0"/><rect x="230" y="350" width="160" height="160" rx="14" stroke="#E4572E"/></g><rect x="290" y="410" width="40" height="40" rx="8" fill="#F1EFE9"/></svg>'), k: 'ej'}
+};
 const EJ = {
   es: {
     material: 'Una diapositiva es una página que se pasa. Una charla viva, en cambio, es una secuencia de beats dentro de unas pocas escenas. Cada clic del ponente avanza exactamente un beat. El estado completo de la charla es la pareja escena y beat, de modo que la dirección con el número tres y cuatro muestra siempre el mismo fotograma. La charla se prepara con el wifi apagado porque no depende de ninguna red. En una prueba con 24 beats, el recorrido hacia delante, hacia atrás y tras recargar dio el mismo resultado en todos ellos. Una consola puede mostrar órdenes reales con su salida, y un diagrama puede crecer nodo a nodo. Al final, un código QR llevaba a la audiencia al repositorio de origen.',
@@ -1362,6 +1558,7 @@ const EJ = {
 @minutos: 5
 
 == Idea
+imagen: ej-1
 # Las diapositivas son páginas.
 nota: Deja un silencio antes del siguiente clic.
 fuente: «Una diapositiva es una página que se pasa»
@@ -1374,6 +1571,7 @@ type: Un clic, un beat.
 fuente: «Cada clic del ponente avanza exactamente un beat»
 
 == Estado
+imagen: ej-2
 # El estado es { escena, beat }.
 fuente: «El estado completo de la charla es la pareja escena y beat»
 --
@@ -1384,6 +1582,7 @@ n: 0 -> 24 | beats recorridos con el mismo resultado
 fuente: «En una prueba con 24 beats, el recorrido hacia delante, hacia atrás y tras recargar dio el mismo resultado»
 
 == Sin conexión
+imagen: ej-3
 # Con el wifi apagado.
 fuente: «La charla se prepara con el wifi apagado»
 --
@@ -1401,6 +1600,7 @@ Presentador -> Vista general
 nota: El diagrama crece un nodo por clic.
 
 == Cierre
+imagen: ej-4 | fondo
 grafico: Beats por escena | Idea, Estado, Red, Cierre
 serie: Beats = 3, 3, 5, 2
 ---
@@ -1418,6 +1618,7 @@ fuente: «un código QR llevaba a la audiencia al repositorio de origen»
 @minutos: 5
 
 == Idea
+imagen: ej-1
 # Slides are pages.
 nota: Leave a silence before the next click.
 fuente: «A slide is a page you flip»
@@ -1430,6 +1631,7 @@ type: One click, one beat.
 fuente: «Each click from the speaker advances exactly one beat»
 
 == State
+imagen: ej-2
 # The state is { scene, beat }.
 fuente: «The whole state of the talk is the pair scene and beat»
 --
@@ -1440,6 +1642,7 @@ n: 0 -> 24 | beats walked with the same result
 fuente: «In a test with 24 beats, walking forwards, backwards and after reloading gave the same result»
 
 == Offline
+imagen: ej-3
 # With the Wi-Fi off.
 fuente: «The talk is prepared with the Wi-Fi off»
 --
@@ -1457,6 +1660,7 @@ Presenter -> Overview
 nota: The diagram grows one node per click.
 
 == Closing
+imagen: ej-4 | fondo
 grafico: Beats per scene | Idea, State, Offline, Closing
 serie: Beats = 3, 3, 5, 2
 ---
@@ -1474,6 +1678,7 @@ fuente: «a QR code took the audience to the source repository»
 @minutos: 5
 
 == Ideia
+imagen: ej-1
 # Os diapositivos são páginas.
 nota: Deixe um silêncio antes do clique seguinte.
 fuente: «Um diapositivo é uma página que se vira»
@@ -1486,6 +1691,7 @@ type: Um clique, um beat.
 fuente: «Cada clique do orador avança exatamente um beat»
 
 == Estado
+imagen: ej-2
 # O estado é { cena, beat }.
 fuente: «O estado completo da palestra é o par cena e beat»
 --
@@ -1496,6 +1702,7 @@ n: 0 -> 24 | beats percorridos com o mesmo resultado
 fuente: «Num teste com 24 beats, o percurso para a frente, para trás e após recarregar deu o mesmo resultado»
 
 == Sem ligação
+imagen: ej-3
 # Com o wifi desligado.
 fuente: «A palestra prepara-se com o wifi desligado»
 --
@@ -1513,6 +1720,7 @@ Apresentador -> Vista geral
 nota: O diagrama cresce um nó por clique.
 
 == Fecho
+imagen: ej-4 | fondo
 grafico: Beats por cena | Ideia, Estado, Rede, Fecho
 serie: Beats = 3, 3, 5, 2
 ---
@@ -1592,8 +1800,8 @@ function qrMatriz(texto) {
    Bloques: afirmacion{texto} texto{texto} tacha{texto} maquina{texto} contador{desde,hasta,dec,sufijo,etiqueta}
             terminal{lineas:[{c:'cmd'|'out'|'hl',texto}],auto} nodo{texto} flecha{de,a} grafico{titulo,cats} serie{nombre,valores} qr{texto}
    Los errores son DATOS {linea, cod, args}: se redactan al pintar, en el idioma del momento. ══ */
-const TEMAS = ['oscuro', 'claro'], IDIOMAS_DECK = ['es', 'en', 'pt'], AVISOS_COD = ['vacio', 'tacha', 'largo'];
-const deckVacio = (idioma = 'es') => ({formato: 'escenia/1', titulo: '', autor: '', idioma, tema: 'oscuro', acento: '#E4572E', minutos: 0, escenas: []});
+const TEMAS = ['oscuro', 'claro'], IDIOMAS_DECK = ['es', 'en', 'pt'], AVISOS_COD = ['vacio', 'tacha', 'largo', 'sin-imagen', 'contraste', 'acento-bajo'], TEMA_COL = {oscuro: {bg: '#0B0D10', fg: '#F1EFE9'}, claro: {bg: '#F6F4EF', fg: '#14171A'}};
+const deckVacio = (idioma = 'es') => ({formato: 'escenia/1', titulo: '', autor: '', idioma, tema: 'oscuro', acento: '#E4572E', fondo: '', texto: '', minutos: 0, escenas: []});
 const limpiaLinea = s => String(s ?? '').replace(/[\r\n\t]+/g, ' ').replace(/\s+/g, ' ').trim();
 const decimalesDe = s => { const m = String(s).replace(',', '.').match(/\.(\d+)$/); return m ? Math.min(2, m[1].length) : 0; };
 const numDe = s => parseFloat(String(s).replace(',', '.'));
@@ -1612,6 +1820,7 @@ function parseGuion(src) {
       if (k === 'titulo' || k === 'autor') D[k] = v;
       else if (k === 'tema') { if (TEMAS.includes(v)) D.tema = v; else err(L, 'meta', 'tema'); }
       else if (k === 'idioma') { if (IDIOMAS_DECK.includes(v)) D.idioma = v; else err(L, 'meta', 'idioma'); }
+      else if (k === 'fondo' || k === 'texto') { if (v === '') D[k] = ''; else if (/^#[0-9a-f]{6}$/i.test(v)) D[k] = v.toUpperCase(); else err(L, 'meta', k); }
       else if (k === 'acento') { if (/^#[0-9a-f]{6}$/i.test(v)) D.acento = v.toUpperCase(); else err(L, 'meta', 'acento'); }
       else if (k === 'minutos') { const x = numDe(v); if (x >= 0 && x <= 600) D.minutos = Math.round(x); else err(L, 'meta', 'minutos'); }
       else err(L, 'desconocida', s.slice(0, 40));
@@ -1641,6 +1850,11 @@ function parseGuion(src) {
       if (!nums.length || nums.some(x => !isFinite(x)) || nums.length > 12) return err(L, 'numero', s.slice(0, 40));
       aniade({k: 'serie', nombre: limpiaLinea(m[1]), valores: nums}); return;
     }
+    if (/^imagen\s*:/i.test(s)) {
+      m = s.match(/^imagen\s*:\s*([A-Za-z0-9_-]{3,32})\s*(?:\|\s*(lado|fondo))?\s*$/i);
+      if (!m) return err(L, 'imagen', s.slice(0, 40));
+      aniade({k: 'imagen', id: m[1], modo: (m[2] || 'lado').toLowerCase()}); return;
+    }
     if ((m = s.match(/^qr:\s*(.+)$/i))) { aniade({k: 'qr', texto: limpiaLinea(m[1])}); return; }
     if ((m = s.match(/^nota:\s*(.*)$/i))) { beat.nota = limpiaLinea((beat.nota ? beat.nota + ' ' : '') + m[1]); return; }
     if ((m = s.match(/^fuente:\s*(.*)$/i))) { beat.fuente = limpiaLinea(m[1]).replace(/^[«"“]\s*|\s*[»"”]$/g, ''); return; }
@@ -1660,12 +1874,15 @@ function parseGuion(src) {
       if (['afirmacion', 'texto', 'maquina'].includes(bl.k) && bl.texto.length > 150) errores.push({linea: 0, cod: 'largo', args: [si + 1, bi + 1]});
     });
   }));
+  const ef = coloresEfectivos(D), cr = contraste(ef.bg, ef.fg), ca = contraste(ef.bg, D.acento);
+  if (cr < 4.5) errores.push({linea: 0, cod: 'contraste', args: [cr.toFixed(1)]});
+  if (ca < 3) errores.push({linea: 0, cod: 'acento-bajo', args: [ca.toFixed(1)]});
   return {deck: D, errores};
 }
 
 const numTxt = x => String(+x);
 function serializaGuion(D) {
-  const o = ['@titulo: ' + limpiaLinea(D.titulo), '@autor: ' + limpiaLinea(D.autor), '@idioma: ' + D.idioma, '@tema: ' + D.tema, '@acento: ' + D.acento, '@minutos: ' + (D.minutos || 0)];
+  const o = ['@titulo: ' + limpiaLinea(D.titulo), '@autor: ' + limpiaLinea(D.autor), '@idioma: ' + D.idioma, '@tema: ' + D.tema, '@acento: ' + D.acento, ...(D.fondo ? ['@fondo: ' + D.fondo] : []), ...(D.texto ? ['@texto: ' + D.texto] : []), '@minutos: ' + (D.minutos || 0)];
   D.escenas.forEach(e => {
     o.push('', '== ' + limpiaLinea(e.titulo));
     e.beats.forEach((b, bi) => {
@@ -1683,6 +1900,7 @@ function serializaGuion(D) {
           case 'grafico': o.push('grafico: ' + limpiaLinea(bl.titulo) + (bl.cats.length ? ' | ' + bl.cats.map(limpiaLinea).join(', ') : '')); break;
           case 'serie': o.push('serie: ' + limpiaLinea(bl.nombre) + ' = ' + bl.valores.map(numTxt).join(', ')); break;
           case 'qr': o.push('qr: ' + limpiaLinea(bl.texto)); break;
+          case 'imagen': o.push('imagen: ' + bl.id + (bl.modo === 'fondo' ? ' | fondo' : '')); break;
         }
       });
       if (b.nota) o.push('nota: ' + limpiaLinea(b.nota));
@@ -1694,13 +1912,14 @@ function serializaGuion(D) {
 
 /* compilación: añade las matrices QR (cálculo local) y un identificador estable de la charla */
 const hashCorto = s => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return (h >>> 0).toString(36); };
-function compila(D) {
-  const C = JSON.parse(JSON.stringify(D)), errores = [];
+function compila(D, imgs) {
+  const C = JSON.parse(JSON.stringify(D)), errores = []; C.imgs = {};
   if (!C.escenas.length) errores.push({linea: 0, cod: 'sin-escenas', args: []});
   C.escenas.forEach((e, si) => e.beats.forEach((b, bi) => b.bloques.forEach(bl => {
+    if (bl.k === 'imagen') { const im = imgs && imgs[bl.id]; if (im && im.d) C.imgs[bl.id] = {d: im.d, k: im.k || 'propia', a: im.a || '', l: im.l || '', m: im.m || ''}; else errores.push({linea: 0, cod: 'sin-imagen', args: [si + 1, bi + 1]}); }
     if (bl.k === 'qr') { try { bl.m = qrMatriz(bl.texto); } catch (x) { errores.push({linea: 0, cod: 'qr-largo', args: [si + 1, bi + 1]}); bl.m = null; } }
   })));
-  C.id = hashCorto(JSON.stringify(D));
+  C.id = hashCorto(JSON.stringify(D) + Object.keys(C.imgs).sort().join(','));
   return {deck: C, errores};
 }
 const esAviso = e => AVISOS_COD.includes(e.cod);
@@ -1752,6 +1971,32 @@ function deckDeIA(raw, idioma) {
   return D;
 }
 
+/* ── colores: contraste calculado por código (WCAG) ── */
+const hexRgb = h => { h = String(h || '#000000').replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16) || 0); };
+const lumRel = h => { const [r, g, b] = hexRgb(h).map(v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }); return .2126 * r + .7152 * g + .0722 * b; };
+const contraste = (a, b) => { const x = lumRel(a), y = lumRel(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+const coloresEfectivos = D => { const t = TEMA_COL[D.tema] || TEMA_COL.oscuro; return {bg: D.fondo || t.bg, fg: D.texto || t.fg}; };
+/* ── cabeceras e imágenes dentro del guion de texto (sin reescribir lo demás) ── */
+function setMeta(g, k, v) {
+  const L = String(g ?? '').split('\n'), re = new RegExp('^@' + k + '\\s*:'), i = L.findIndex(l => re.test(l.trim()));
+  if (!v) { if (i >= 0) L.splice(i, 1); return L.join('\n'); }
+  const nl = '@' + k + ': ' + v;
+  if (i >= 0) L[i] = nl; else { let j = -1; L.forEach((l, n) => { if (/^@\w+\s*:/.test(l.trim())) j = n; }); L.splice(j + 1, 0, nl); }
+  return L.join('\n');
+}
+function guionConImagen(g, si, id, modo) {
+  const L = String(g ?? '').split('\n'); let n = -1, ini = -1, fin = L.length;
+  for (let i = 0; i < L.length; i++) if (/^==/.test(L[i].trim())) { n++; if (n === si) ini = i; else if (n === si + 1) { fin = i; break; } }
+  if (ini < 0) return g;
+  const cuerpo = L.slice(ini + 1, fin).filter(l => !/^imagen\s*:/i.test(l.trim()));
+  return [...L.slice(0, ini + 1), ...(id ? ['imagen: ' + id + (modo === 'fondo' ? ' | fondo' : '')] : []), ...cuerpo, ...L.slice(fin)].join('\n');
+}
+const idsImagenes = g => [...String(g ?? '').matchAll(/^\s*imagen\s*:\s*([A-Za-z0-9_-]{3,32})/gim)].map(m => m[1]);
+const escenasSinImagen = D => D.escenas.map((e, i) => e.beats.some(b => b.bloques.some(x => x.k === 'imagen')) ? -1 : i).filter(i => i >= 0);
+const textosDeEscena = (D, si, n = 3) => { const o = []; D.escenas[si].beats.forEach(b => b.bloques.forEach(bl => { if (['afirmacion', 'texto', 'maquina'].includes(bl.k) && bl.texto && o.length < n) o.push(bl.texto); })); return o; };
+const promptEscena = (D, si, estilo) => { const e = D.escenas[si], tx = textosDeEscena(D, si); return (`Ilustración para una diapositiva titulada «${e.titulo}»` + (tx.length ? '. Ideas de la diapositiva: ' + tx.join('; ') : '') + `. Estilo: ${limpiaLinea(estilo) || 'ilustración editorial limpia'}. Sin texto, sin letras ni logotipos, sin personas reconocibles.`).slice(0, 700); };
+const consultaEscena = (D, si) => { const e = D.escenas[si], extra = (textosDeEscena(D, si, 1)[0] || '').split(/\s+/).slice(0, 5).join(' '); return limpiaLinea((e.titulo || '') + ' ' + (e.titulo && e.titulo.split(/\s+/).length > 2 ? '' : extra)).slice(0, 80); };
+
 /* ══ Reproductor de charlas de EscenIA. Función AUTOCONTENIDA: no usa nada de fuera (ni t(), ni esc()), porque se exporta tal cual
    dentro del HTML de la charla (escenaPlayer.toString()). Escenario fijo de 1920×1080 escalado con bandas negras.
    El estado es solo {escena, beat}: cada fotograma se reconstruye desde cero a partir de él (marco(s,b)), vengas de donde vengas.
@@ -1766,9 +2011,9 @@ function escenaPlayer(host, D, O) {
   const E = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const IDI = ['es', 'en', 'pt'].includes(D.idioma) ? D.idioma : 'es', LOC = {es: 'es-ES', en: 'en-GB', pt: 'pt-PT'}[IDI];
   const UI = {
-    es: {sig: 'Siguiente', ant: 'Anterior', gen: 'Vista general', pres: 'Presentador', apa: 'Apagón', pan: 'Pantalla completa', esc: 'Escena', beat: 'Beat', notas: 'Notas', sinNotas: 'Sin notas en este beat.', actual: 'Ahora', prox: 'Siguiente beat', fin: 'Fin de la charla', ini: 'Iniciar', pau: 'Pausar', rei: 'Reiniciar', cer: 'Cerrar', vacia: 'Esta charla no tiene escenas.', ayuda: '→ siguiente · ← anterior · O vista general · P presentador · F pantalla completa · B apagón', dur: 'Duración prevista'},
-    en: {sig: 'Next', ant: 'Previous', gen: 'Overview', pres: 'Presenter', apa: 'Blackout', pan: 'Fullscreen', esc: 'Scene', beat: 'Beat', notas: 'Notes', sinNotas: 'No notes for this beat.', actual: 'Now', prox: 'Next beat', fin: 'End of the talk', ini: 'Start', pau: 'Pause', rei: 'Reset', cer: 'Close', vacia: 'This talk has no scenes.', ayuda: '→ next · ← previous · O overview · P presenter · F fullscreen · B blackout', dur: 'Planned length'},
-    pt: {sig: 'Seguinte', ant: 'Anterior', gen: 'Vista geral', pres: 'Apresentador', apa: 'Apagão', pan: 'Ecrã inteiro', esc: 'Cena', beat: 'Beat', notas: 'Notas', sinNotas: 'Sem notas neste beat.', actual: 'Agora', prox: 'Beat seguinte', fin: 'Fim da palestra', ini: 'Iniciar', pau: 'Pausar', rei: 'Reiniciar', cer: 'Fechar', vacia: 'Esta palestra não tem cenas.', ayuda: '→ seguinte · ← anterior · O vista geral · P apresentador · F ecrã inteiro · B apagão', dur: 'Duração prevista'}
+    es: {sig: 'Siguiente', ant: 'Anterior', gen: 'Vista general', pres: 'Presentador', apa: 'Apagón', pan: 'Pantalla completa', esc: 'Escena', beat: 'Beat', notas: 'Notas', sinNotas: 'Sin notas en este beat.', actual: 'Ahora', prox: 'Siguiente beat', fin: 'Fin de la charla', ini: 'Iniciar', pau: 'Pausar', rei: 'Reiniciar', cer: 'Cerrar', vacia: 'Esta charla no tiene escenas.', ayuda: '→ siguiente · ← anterior · O vista general · P presentador · F pantalla completa · B apagón', dur: 'Duración prevista', ia: 'Imagen generada con IA', ej: 'Ilustración de ejemplo'},
+    en: {sig: 'Next', ant: 'Previous', gen: 'Overview', pres: 'Presenter', apa: 'Blackout', pan: 'Fullscreen', esc: 'Scene', beat: 'Beat', notas: 'Notes', sinNotas: 'No notes for this beat.', actual: 'Now', prox: 'Next beat', fin: 'End of the talk', ini: 'Start', pau: 'Pause', rei: 'Reset', cer: 'Close', vacia: 'This talk has no scenes.', ayuda: '→ next · ← previous · O overview · P presenter · F fullscreen · B blackout', dur: 'Planned length', ia: 'AI-generated image', ej: 'Example illustration'},
+    pt: {sig: 'Seguinte', ant: 'Anterior', gen: 'Vista geral', pres: 'Apresentador', apa: 'Apagão', pan: 'Ecrã inteiro', esc: 'Cena', beat: 'Beat', notas: 'Notas', sinNotas: 'Sem notas neste beat.', actual: 'Agora', prox: 'Beat seguinte', fin: 'Fim da palestra', ini: 'Iniciar', pau: 'Pausar', rei: 'Reiniciar', cer: 'Fechar', vacia: 'Esta palestra não tem cenas.', ayuda: '→ seguinte · ← anterior · O vista geral · P apresentador · F ecrã inteiro · B apagão', dur: 'Duração prevista', ia: 'Imagem gerada com IA', ej: 'Ilustração de exemplo'}
   }[IDI];
   const CSS = `
 .ez-wrap{width:100%}
@@ -1800,6 +2045,14 @@ function escenaPlayer(host, D, O) {
 .ez-qrb{display:flex;align-items:center;gap:48px}
 .ez-qrb svg{width:340px;height:340px;display:block;border-radius:14px}
 .ez-qt{font:500 34px ui-monospace,"JetBrains Mono",SFMono-Regular,Menlo,Consolas,monospace;color:var(--mu);word-break:break-all;max-width:1000px}
+.ez-cl{width:960px}.ez-cl .ez-afi{font-size:84px;max-width:960px}.ez-cl .ez-txt{font-size:50px;max-width:960px}.ez-cl .ez-maq{font-size:52px;max-width:960px}.ez-cl .ez-num{font-size:170px}.ez-cl .ez-et{max-width:600px}.ez-cl .ez-qrb{flex-direction:column;align-items:flex-start;gap:20px}.ez-cl .ez-qt{max-width:900px}.ez-cl .ez-term{font-size:32px}
+.ez-fig{position:absolute;left:1150px;top:120px;width:620px;height:840px;margin:0;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);background:var(--pa)}
+.ez-fig img,.ez-bgi img{display:block;width:100%;height:100%;object-fit:cover}
+.ez-fig figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 16px;background:rgba(0,0,0,.62);color:#fff;font-size:20px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ez-bgi{position:absolute;left:0;top:0;width:1920px;height:1080px}.ez-scrim{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.ez-scrim~.ez-col .ez-qt,.ez-scrim~.ez-col .ez-et{color:var(--fg)}.ez-scrim~.ez-col .ez-ln.o{color:var(--fg);opacity:.85}.ez-scrim~.ez-col .ez-plt text{fill:var(--fg)}.ez-scrim~.ez-pie{color:var(--fg)}
+.ez-pie .ez-crd{max-width:760px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:22px}
+.ez-pie{z-index:2}.ez-col{z-index:2}
 .ez-pie{position:absolute;left:150px;right:150px;bottom:34px;display:flex;justify-content:space-between;font-size:26px;color:var(--mu);letter-spacing:.02em}
 .ez-pie b{color:var(--ac);font-weight:700}
 .ez-neg{position:absolute;left:0;top:0;right:0;bottom:0;background:#000;z-index:30}
@@ -1833,6 +2086,12 @@ function escenaPlayer(host, D, O) {
   const esPres = O.vista === 'presentador' || (!!O.autonomo && (/[?&]view=presenter/.test(Q) || window.name === 'escenia-presentador'));
   const usaHash = O.hash !== undefined ? O.hash : !!O.autonomo, vid = Math.random().toString(36).slice(2), CANAL = 'escenia:' + (O.canal || D.id || 'x');
   const fmt = (x, dec) => (+x).toLocaleString(LOC, {minimumFractionDigits: dec || 0, maximumFractionDigits: dec || 0});
+  const hx = h => { h = String(h || '#000000').replace('#', ''); return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16) || 0); };
+  const mix = (a, b, t) => '#' + hx(a).map((v, i) => Math.round(v + (hx(b)[i] - v) * t).toString(16).padStart(2, '0')).join('');
+  const rgba = (h, a) => 'rgba(' + hx(h).join(',') + ',' + a + ')';
+  const TH = D.tema === 'claro' ? {bg: '#F6F4EF', fg: '#14171A'} : {bg: '#0B0D10', fg: '#F1EFE9'}, BG = D.fondo || TH.bg, FG = D.texto || TH.fg, PERSONAL = !!(D.fondo || D.texto);
+  const IMGS = D.imgs || {};
+  const cred = d => d.k === 'ia' ? UI.ia + (d.m ? ' · ' + d.m : '') : d.k === 'libre' ? [d.a, d.l, 'Wikimedia Commons'].filter(Boolean).join(' · ') : d.k === 'ej' ? UI.ej : '';
   const PAL = ['var(--ac)', '#4cc9b0', '#e0a526', '#8a7cf0', '#4a9be0'];
   let s = 0, b = 1, negro = false, ovAbierto = false, destruido = false, anims = [], timers = [], ro = null, bc = null, relojT = null;
   let t0 = 0, acum = 0, corre = false, listo = false;
@@ -1846,38 +2105,39 @@ function escenaPlayer(host, D, O) {
     for (let i = ini; i < fin; i++) es.beats[i].bloques.forEach(bl => ventana.push({bl, b: i + 1}));
     return {vis, ventana};
   }
-  function ruta(a, z) {
+  function ruta(a, z, hh) {
+    hh = hh || 60;
     const dx = z.cx - a.cx, dy = z.cy - a.cy;
-    if (a.row === z.row && Math.abs(z.col - a.col) > 1) { const alt = 70 + 50 * (Math.abs(z.col - a.col) - 1), y1 = a.cy - 60, x1 = a.cx, x2 = z.cx; return `M${x1.toFixed(1)} ${y1.toFixed(1)} Q${((x1 + x2) / 2).toFixed(1)} ${(y1 - alt * 2).toFixed(1)} ${x2.toFixed(1)} ${(y1 - 10).toFixed(1)}`; }
-    const t = Math.min(dx ? 150 / Math.abs(dx) : 1e9, dy ? 60 / Math.abs(dy) : 1e9), len = Math.hypot(dx, dy) || 1, ux = dx / len, uy = dy / len, g = 14;
+    if (a.row === z.row && Math.abs(z.col - a.col) > 1) { const alt = 70 + 50 * (Math.abs(z.col - a.col) - 1), y1 = a.cy - hh, x1 = a.cx, x2 = z.cx; return `M${x1.toFixed(1)} ${y1.toFixed(1)} Q${((x1 + x2) / 2).toFixed(1)} ${(y1 - alt * 2).toFixed(1)} ${x2.toFixed(1)} ${(y1 - 10).toFixed(1)}`; }
+    const t = Math.min(dx ? 150 / Math.abs(dx) : 1e9, dy ? hh / Math.abs(dy) : 1e9), len = Math.hypot(dx, dy) || 1, ux = dx / len, uy = dy / len, g = 14;
     return `M${(a.cx + dx * t + ux * g).toFixed(1)} ${(a.cy + dy * t + uy * g).toFixed(1)} L${(z.cx - dx * t - ux * g).toFixed(1)} ${(z.cy - dy * t - uy * g).toFixed(1)}`;
   }
-  function wTerminal(vis) {
+  function wTerminal(vis, CW) {
     const ls = []; vis.forEach(v => { if (v.bl.k === 'terminal') v.bl.lineas.forEach(l => ls.push({c: l.c, texto: l.texto, b: v.b, auto: v.bl.auto})); });
-    return `<div class="ez-term" data-k="terminal" data-b="${ls[0].b}">${ls.map(l => `<div class="ez-ln ${l.c[0]}" data-b="${l.b}" data-auto="${l.auto ? 1 : 0}">${E(l.texto)}</div>`).join('')}</div>`;
+    return `<div class="ez-term" data-k="terminal" data-b="${ls[0].b}" style="width:${CW - 120}px">${ls.map(l => `<div class="ez-ln ${l.c[0]}" data-b="${l.b}" data-auto="${l.auto ? 1 : 0}">${E(l.texto)}</div>`).join('')}</div>`;
   }
-  function wDiagrama(vis, ventana) {
+  function wDiagrama(vis, ventana, CW) {
     const nodos = []; ventana.forEach(v => { if (v.bl.k === 'nodo' && !nodos.find(n => n.t === v.bl.texto)) nodos.push({t: v.bl.texto, b: v.b}); });
-    const N = nodos.length, cols = N <= 4 ? N : (N <= 6 ? 3 : 4), rows = Math.ceil(N / cols) || 1, cw = 1620 / (cols || 1), rh = 520 / rows;
+    const N = nodos.length, mx = Math.max(1, Math.floor(CW / 400)), filas = Math.ceil(N / mx) || 1, cols = N <= mx ? Math.max(N, 1) : Math.ceil(N / filas), rows = Math.ceil(N / cols) || 1, cw = CW / cols, rh = 520 / rows, nh = Math.max(60, Math.min(120, rh - 24));
     nodos.forEach((n, i) => { n.row = Math.floor(i / cols); n.col = i % cols; n.cx = cw * (n.col + .5); n.cy = rh * (n.row + .5); });
     const por = t => nodos.find(n => n.t === t), visN = nodos.filter(n => vis.some(v => v.bl.k === 'nodo' && v.bl.texto === n.t));
     const fl = vis.filter(v => v.bl.k === 'flecha' && por(v.bl.de) && por(v.bl.a)), primero = Math.min(...vis.filter(v => v.bl.k === 'nodo' || v.bl.k === 'flecha').map(v => v.b));
-    return `<div class="ez-dia" data-k="diagrama" data-b="${primero}"><svg viewBox="0 0 1620 520" aria-hidden="true">${fl.map(v => `<path class="ez-arr" data-b="${v.b}" marker-end="url(#ez-ah)" d="${ruta(por(v.bl.de), por(v.bl.a))}"/>`).join('')}</svg>${visN.map(n => `<div class="ez-nd" data-b="${n.b}" style="left:${(n.cx - 150).toFixed(1)}px;top:${(n.cy - 60).toFixed(1)}px">${E(n.t)}</div>`).join('')}</div>`;
+    return `<div class="ez-dia" data-k="diagrama" data-b="${primero}" style="width:${CW}px"><svg viewBox="0 0 ${CW} 520" style="width:${CW}px" aria-hidden="true">${fl.map(v => `<path class="ez-arr" data-b="${v.b}" marker-end="url(#ez-ah)" d="${ruta(por(v.bl.de), por(v.bl.a), nh / 2)}"/>`).join('')}</svg>${visN.map(n => `<div class="ez-nd" data-b="${n.b}" style="left:${(n.cx - 150).toFixed(1)}px;top:${(n.cy - nh / 2).toFixed(1)}px;height:${nh.toFixed(0)}px">${E(n.t)}</div>`).join('')}</div>`;
   }
-  function wGrafico(vis, ventana) {
+  function wGrafico(vis, ventana, CW) {
     const gr = ventana.find(v => v.bl.k === 'grafico'), serW = ventana.filter(v => v.bl.k === 'serie'), serV = vis.filter(v => v.bl.k === 'serie');
     const cats = gr ? gr.bl.cats : [], nc = Math.max(cats.length, 1, ...serW.map(v => v.bl.valores.length)), ns = Math.max(1, serW.length);
     const vals = serW.flatMap(v => v.bl.valores), vmax = Math.max(0, ...vals), vmin = Math.min(0, ...vals), rg = (vmax - vmin) || 1, y0 = 440 - (0 - vmin) / rg * 370, yv = v => y0 - v / rg * 370;
-    const gw = 1540 / nc, bw = Math.min(150, gw * .72 / ns), primero = Math.min(...vis.filter(v => v.bl.k === 'serie' || v.bl.k === 'grafico').map(v => v.b));
+    const gw = (CW - 80) / nc, bw = Math.min(150, gw * .72 / ns), primero = Math.min(...vis.filter(v => v.bl.k === 'serie' || v.bl.k === 'grafico').map(v => v.b));
     let g = '';
     if (gr && vis.some(v => v.bl.k === 'grafico')) g += `<text x="40" y="34" font-size="32" font-weight="700" fill="var(--mu)">${E(gr.bl.titulo)}</text>`;
-    g += `<line x1="40" x2="1580" y1="${y0.toFixed(1)}" y2="${y0.toFixed(1)}" stroke="var(--ln)" stroke-width="3"/>`;
+    g += `<line x1="40" x2="${CW - 40}" y1="${y0.toFixed(1)}" y2="${y0.toFixed(1)}" stroke="var(--ln)" stroke-width="3"/>`;
     cats.forEach((c, i) => { g += `<text x="${(40 + gw * (i + .5)).toFixed(1)}" y="494" font-size="28" text-anchor="middle" fill="var(--mu)">${E(c.length > 16 ? c.slice(0, 15) + '…' : c)}</text>`; });
     serW.forEach((sv, si) => { const vis1 = serV.includes(sv) || serV.some(x => x.bl === sv.bl); if (!vis1) return; const col = PAL[si % PAL.length];
       let bars = ''; sv.bl.valores.forEach((x, i) => { const bx = 40 + gw * (i + .5) - (bw * ns) / 2 + bw * si, ya = yv(x), top = Math.min(ya, y0), h = Math.abs(ya - y0); bars += `<rect x="${bx.toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(h, 1).toFixed(1)}" rx="8" fill="${col}"/><text x="${(bx + bw / 2).toFixed(1)}" y="${(x >= 0 ? top - 12 : top + h + 30).toFixed(1)}" font-size="26" font-weight="700" text-anchor="middle" fill="var(--fg)">${E(fmt(x, Math.abs(x % 1) > 0 ? 1 : 0))}</text>`; });
       g += `<g data-b="${sv.b}">${bars}</g>`;
-      if (ns > 1) g += `<g data-b="${sv.b}"><rect x="${1580 - 220 * (ns - si)}" y="12" width="22" height="22" rx="5" fill="${col}"/><text x="${1580 - 220 * (ns - si) + 32}" y="31" font-size="26" fill="var(--fg)">${E(sv.bl.nombre.length > 12 ? sv.bl.nombre.slice(0, 11) + '…' : sv.bl.nombre)}</text></g>`; });
-    return `<svg class="ez-plt" data-k="grafico" data-b="${primero}" viewBox="0 0 1620 520" role="img">${g}</svg>`;
+      if (ns > 1) g += `<g data-b="${sv.b}"><rect x="${CW - 40 - 220 * (ns - si)}" y="12" width="22" height="22" rx="5" fill="${col}"/><text x="${CW - 40 - 220 * (ns - si) + 32}" y="31" font-size="26" fill="var(--fg)">${E(sv.bl.nombre.length > 12 ? sv.bl.nombre.slice(0, 11) + '…' : sv.bl.nombre)}</text></g>`; });
+    return `<svg class="ez-plt" data-k="grafico" data-b="${primero}" viewBox="0 0 ${CW} 520" style="width:${CW}px" role="img">${g}</svg>`;
   }
   function wQR(v) {
     const m = v.bl.m; if (!m) return '';
@@ -1885,7 +2145,9 @@ function escenaPlayer(host, D, O) {
     return `<div class="ez-qrb" data-k="qr" data-b="${v.b}"><svg viewBox="-4 -4 ${m.length + 8} ${m.length + 8}" shape-rendering="crispEdges" role="img"><rect x="-4" y="-4" width="${m.length + 8}" height="${m.length + 8}" fill="#fff"/><path d="${d}" fill="#000"/></svg><span class="ez-qt">${E(v.bl.texto)}</span></div>`;
   }
   function marco(si, bi) {
-    const {vis, ventana} = visibles(si, bi), textuales = [], hecho = {};
+    const {vis, ventana} = visibles(si, bi), textuales = [], hecho = {}, es0 = D.escenas[si];
+    let im = null, modo = ''; es0.beats.forEach((be, i) => be.bloques.forEach(bl => { if (bl.k === 'imagen' && IMGS[bl.id]) { if (!modo) modo = bl.modo; if (i < bi) im = {bl, b: i + 1}; } }));
+    const lado = modo === 'lado', CW = lado ? 960 : 1620;
     vis.forEach(v => {
       if (['afirmacion', 'texto', 'maquina'].includes(v.bl.k)) textuales.push(v);
       else if (v.bl.k === 'tacha') { let tg = null; if (v.bl.texto) { for (let i = textuales.length - 1; i >= 0; i--) if (textuales[i].bl.texto === v.bl.texto) { tg = textuales[i]; break; } } else tg = textuales[textuales.length - 1]; if (tg) tg.struck = true; }
@@ -1897,15 +2159,19 @@ function escenaPlayer(host, D, O) {
       else if (bl.k === 'texto') h += `<p class="ez-txt${v.struck ? ' ez-tach' : ''}"${dat}>${E(bl.texto)}</p>`;
       else if (bl.k === 'maquina') h += `<p class="ez-maq${v.struck ? ' ez-tach' : ''}"${dat} data-tx="${E(bl.texto)}"><span class="ez-mt">${E(bl.texto)}</span></p>`;
       else if (bl.k === 'contador') h += `<div class="ez-cnt"${dat} data-d="${bl.desde}" data-h="${bl.hasta}" data-dec="${bl.dec || 0}"><span class="ez-num">${E(fmt(bl.hasta, bl.dec))}</span>${bl.sufijo ? `<span class="ez-suf">${E(bl.sufijo)}</span>` : ''}${bl.etiqueta ? `<span class="ez-et">${E(bl.etiqueta)}</span>` : ''}</div>`;
-      else if (bl.k === 'terminal' && !hecho.t) { hecho.t = 1; h += wTerminal(vis); }
-      else if ((bl.k === 'nodo' || bl.k === 'flecha') && !hecho.d) { hecho.d = 1; h += wDiagrama(vis, ventana); }
-      else if ((bl.k === 'serie' || bl.k === 'grafico') && !hecho.g) { hecho.g = 1; h += wGrafico(vis, ventana); }
+      else if (bl.k === 'terminal' && !hecho.t) { hecho.t = 1; h += wTerminal(vis, CW); }
+      else if ((bl.k === 'nodo' || bl.k === 'flecha') && !hecho.d) { hecho.d = 1; h += wDiagrama(vis, ventana, CW); }
+      else if ((bl.k === 'serie' || bl.k === 'grafico') && !hecho.g) { hecho.g = 1; h += wGrafico(vis, ventana, CW); }
       else if (bl.k === 'qr') h += wQR(v);
     });
-    const pie = `<div class="ez-pie"><span>${E(D.titulo)}${D.autor ? ' · ' + E(D.autor) : ''}</span><span><b>${si + 1}.${bi}</b> · ${si + 1}/${nS}</span></div>`;
-    return `<div class="ez-col">${h}</div>${pie}`;
+    let pre = '', credFondo = '';
+    if (im) { const d = IMGS[im.bl.id], c = cred(d), alt = E(es0.titulo);
+      if (lado) pre = `<figure class="ez-fig" data-k="imagen" data-b="${im.b}"><img src="${E(d.d)}" alt="${alt}">${c ? `<figcaption>${E(c)}</figcaption>` : ''}</figure>`;
+      else { pre = `<div class="ez-bgi" data-k="imagen" data-b="${im.b}"><img src="${E(d.d)}" alt="${alt}"></div><div class="ez-scrim" style="background:linear-gradient(90deg,${rgba(BG, .94)} 0%,${rgba(BG, .85)} 50%,${rgba(BG, .74)} 100%)"></div>`; credFondo = c; } }
+    const pie = `<div class="ez-pie"><span>${E(D.titulo)}${D.autor ? ' · ' + E(D.autor) : ''}</span>${credFondo ? `<span class="ez-crd">${E(credFondo)}</span>` : ''}<span><b>${si + 1}.${bi}</b> · ${si + 1}/${nS}</span></div>`;
+    return `${pre}<div class="ez-col${lado ? ' ez-cl' : ''}">${h}</div>${pie}`;
   }
-  const nuevoStage = (si, bi) => { const d = document.createElement('div'); d.className = 'ez-st ' + (D.tema === 'claro' ? 'ez-th-c' : 'ez-th-o'); d.style.setProperty('--ac', D.acento || '#E4572E'); d.innerHTML = marco(si, bi); return d; };
+  const nuevoStage = (si, bi) => { const d = document.createElement('div'); d.className = 'ez-st ' + (D.tema === 'claro' ? 'ez-th-c' : 'ez-th-o'); d.style.setProperty('--ac', D.acento || '#E4572E'); if (PERSONAL) { d.style.setProperty('--bg', BG); d.style.setProperty('--fg', FG); d.style.setProperty('--mu', mix(FG, BG, .42)); d.style.setProperty('--ln', mix(BG, FG, .16)); d.style.setProperty('--pa', mix(BG, FG, .06)); } d.innerHTML = marco(si, bi); return d; };
 
   /* ── estructura ── */
   host.innerHTML = '';
@@ -2050,14 +2316,15 @@ function escenaPlayer(host, D, O) {
 }
 
 /* ══ Lógica de EscenIA. Patrón Forja: la IA propone el guion; el código comprueba (citas, cifras, determinismo, desbordes, red). ══ */
-const STEPS = ['Inicio', 'Material', 'Guion', 'Escenario', 'Exportar'];
-const NAV = [['Empezar', 'Prueba con el ejemplo: no necesita clave.'], ['Siguiente: guion', 'Pega tu material o empieza en blanco.'], ['Siguiente: escenario', 'Escribe el guion: un bloque por línea y «--» para cada beat.'], ['Siguiente: exportar', 'Pasa los beats con → y comprueba la charla.'], ['Volver al inicio', 'Descarga la charla autónoma.']];
-const RENDER = {0: pintaInicio, 1: pintaMaterial, 2: pintaGuion, 3: pintaEscenario, 4: pintaExportar};
+const STEPS = ['Inicio', 'Material', 'Guion', 'Aspecto', 'Escenario', 'Exportar'];
+const NAV = [['Empezar', 'Prueba con el ejemplo: no necesita clave.'], ['Siguiente: guion', 'Pega tu material o empieza en blanco.'], ['Siguiente: aspecto', 'Escribe el guion: un bloque por línea y «--» para cada beat.'], ['Siguiente: escenario', 'Elige colores y una imagen para cada escena.'], ['Siguiente: exportar', 'Pasa los beats con → y comprueba la charla.'], ['Volver al inicio', 'Descarga la charla autónoma.']];
+const RENDER = {0: pintaInicio, 1: pintaMaterial, 2: pintaGuion, 3: pintaAspecto, 4: pintaEscenario, 5: pintaExportar};
 const GLOS = [
   ['¿Qué hace?', 'Convierte un guion de texto en una charla por beats: un clic es un beat sobre un escenario fijo de 1920×1080. Puedes escribirlo tú o pedir a la IA una propuesta a partir de tu material.'],
   ['Beat y escena', 'Una escena agrupa beats. El estado de la charla es solo la pareja escena y beat: «#3.4» en la dirección es siempre el mismo fotograma.'],
   ['Auditoría de contenido', 'Cada beat propuesto por la IA lleva una cita literal de tu material. El código comprueba que existe, señala las cifras que no están en el material y lista las frases del material que ningún beat cubre.'],
   ['Comprobar la charla', 'Recorre todos los beats hacia delante, hacia atrás, a salto y desde la dirección, y compara los fotogramas. Detecta además texto que se sale del escenario. Compara estructura, no píxeles.'],
+  ['Imágenes y derechos', 'Las imágenes de IA se generan con tu clave y se marcan como tales en la diapositiva. Las libres vienen de Wikimedia Commons con licencia CC0, dominio público, CC BY o CC BY-SA y muestran autor y licencia; comprueba siempre que cumples sus condiciones. Las que subes son responsabilidad tuya.'],
   ['Sin conexión', 'La charla exportada es un único HTML sin recursos externos y con una política que bloquea la red. Los códigos QR se calculan en tu navegador.'],
   ['Privacidad', 'Tu material y tu guion se guardan solo en este navegador. Solo sale hacia tu proveedor de IA el texto del material, si pides un guion, con los datos personales enmascarados y tras un aviso previo.'],
   ['Tu clave de IA', 'Funciona con OpenAI, Google Gemini o Anthropic Claude. La clave se guarda solo en este navegador.']
@@ -2067,10 +2334,11 @@ const CAN_NEXT = i => {
   if (i >= 2) { reparsea(); if (!DECK.escenas.length || bloqueantes(ERR).length) return t('Corrige los errores del guion antes de seguir.'); }
   return true;
 };
-let S = {material: '', guion: '', esEjemplo: false, longitud: 'media'};
+const IMG_DEF = {openai: 'gpt-image-1-mini', gemini: 'gemini-3.1-flash-lite-image'};   // los más económicos de cada proveedor al comprobarlo (oct 2026); editables
+let S = {material: '', guion: '', esEjemplo: false, longitud: 'media', imgs: {}, imgCfg: {origen: 'ia', prov: 'openai', modelo: {...IMG_DEF}, estilo: '', precio: ''}};
 let ENVIO_OK = false, DECK = deckVacio('es'), ERR = [], PLAYER = null, PLAYER_ID = '', VERIF = null, busy = false;
 const ejemplo = () => EJ[LANG] || EJ.es;
-function aplicaEjemplo() { const e = ejemplo(); S.material = e.material; S.guion = e.guion; S.esEjemplo = true; VERIF = null; }
+function aplicaEjemplo() { const e = ejemplo(); S.material = e.material; S.guion = e.guion; S.esEjemplo = true; S.imgs = {...EJIMG}; VERIF = null; }
 window.addEventListener('langchange', () => { if (S.esEjemplo) { aplicaEjemplo(); guarda(); } });
 function reparsea() { const r = parseGuion(S.guion); DECK = r.deck; ERR = r.errores; return r; }
 function msgError(e) {
@@ -2086,6 +2354,10 @@ function msgError(e) {
     case 'tacha': return t('Escena {0}, beat {1}: no hay texto previo que tachar.', a[0], a[1]);
     case 'largo': return t('Escena {0}, beat {1}: hay un texto muy largo y puede no caber.', a[0], a[1]);
     case 'qr-largo': return t('Escena {0}, beat {1}: el texto del QR es demasiado largo (máximo 213 bytes).', a[0], a[1]);
+    case 'imagen': return t('Línea {0}: la línea «imagen» necesita un identificador (letras, números, - o _).', L);
+    case 'sin-imagen': return t('Escena {0}, beat {1}: falta el fichero de una imagen; vuelve a elegirla en «Colores e imágenes».', a[0], a[1]);
+    case 'contraste': return t('El contraste entre texto y fondo es bajo ({0}:1); se recomienda 4,5:1 o más.', a[0]);
+    case 'acento-bajo': return t('El color de acento casi no se distingue del fondo ({0}:1).', a[0]);
     case 'sin-escenas': return t('El guion no tiene escenas: empieza con «== Título».');
   }
   return e.cod;
@@ -2095,7 +2367,7 @@ const nombreFichero = (ext) => (slug(DECK.titulo || 'escenia') || 'escenia') + e
 /* ── 0 · inicio ── */
 function pintaInicio() { $('inicioProj').innerHTML = S.guion.trim() ? `${esc(t('Tienes una charla guardada en este navegador.'))} <button class="btn btn-ghost btn-sm" id="btnCont" type="button">${esc(t('Verla'))}</button>` : ''; }
 $('btnStart').onclick = () => go(1);
-$('btnEjemplo').onclick = () => { aplicaEjemplo(); guarda(); go(3); toast(t('Ejemplo de demostración, sin usar la IA')); };
+$('btnEjemplo').onclick = () => { aplicaEjemplo(); guarda(); go(4); toast(t('Ejemplo de demostración, sin usar la IA')); };
 document.addEventListener('click', e => { if (e.target.id === 'btnCont') go(2); });
 
 /* ── 1 · material ── */
@@ -2116,14 +2388,17 @@ $('btnBlanco').onclick = () => { if (S.guion.trim() && !confirm(t('Esto sustituy
 
 /* aviso previo al envío: se enseña lo que sale (ya enmascarado) y se pide confirmación una vez por sesión */
 let envioRes = null;
-function pideEnvio(textoEnviado, masks) {
-  if (ENVIO_OK) return Promise.resolve(true);
-  $('envioInfo').innerHTML = `<p class="sub" style="margin-top:0">${esc(t('Se enviarán unos {0} caracteres a {1}. Se han enmascarado {2} dato(s) personales.', nf(textoEnviado.length), PROV[getProv()].n, masks))}</p><p class="help">${esc(t('Muestra del envío:'))}</p>`;
-  $('envioTxt').textContent = textoEnviado.slice(0, 3000) + (textoEnviado.length > 3000 ? '\n…' : '');
+let envioTipo = 'texto';
+function confirmaEnvio(infoHtml, texto, tipo) {
+  envioTipo = tipo || 'texto'; $('envioInfo').innerHTML = infoHtml; $('envioTxt').textContent = texto.slice(0, 3000) + (texto.length > 3000 ? '\n…' : '');
   $('envioOk').checked = false; $('envioSi').disabled = true; $('mEnvio').classList.add('on');
   return new Promise(r => { envioRes = r; });
 }
-function cierraEnvio(v) { $('mEnvio').classList.remove('on'); if (envioRes) { const r = envioRes; envioRes = null; if (v) ENVIO_OK = true; r(v); } }
+function pideEnvio(textoEnviado, masks) {
+  if (ENVIO_OK) return Promise.resolve(true);
+  return confirmaEnvio(`<p class="sub" style="margin-top:0">${esc(t('Se enviarán unos {0} caracteres a {1}. Se han enmascarado {2} dato(s) personales.', nf(textoEnviado.length), PROV[getProv()].n, masks))}</p><p class="help">${esc(t('Muestra del envío:'))}</p>`, textoEnviado, 'texto');
+}
+function cierraEnvio(v) { $('mEnvio').classList.remove('on'); if (envioRes) { const r = envioRes; envioRes = null; if (v && envioTipo === 'texto') ENVIO_OK = true; r(v); } }
 _cierres.mEnvio = () => cierraEnvio(false);
 $('envioOk').onchange = () => { $('envioSi').disabled = !$('envioOk').checked; };
 $('envioSi').onclick = () => cierraEnvio(true); $('envioNo').onclick = () => cierraEnvio(false);
@@ -2158,7 +2433,7 @@ $('btnGen').onclick = async () => {
 };
 
 /* ── 2 · guion ── */
-const ICO = {afirmacion: 'H', texto: 'T', tacha: '~', maquina: '⌨', contador: '#', terminal: '$', nodo: '◻', flecha: '→', grafico: '▮', serie: '', qr: '▦'};
+const ICO = {afirmacion: 'H', texto: 'T', tacha: '~', maquina: '⌨', contador: '#', terminal: '$', nodo: '◻', flecha: '→', grafico: '▮', serie: '', qr: '▦', imagen: '▨'};
 const SN = [['Afirmación', '# Texto grande'], ['Texto', '> Texto normal'], ['Tachar', '~'], ['Se escribe', 'type: Texto que se escribe'], ['Contador', 'n: 0 -> 100 % | etiqueta'], ['Terminal', '$ comando\n| salida\n|! salida destacada'], ['Diagrama', 'A -> B -> C'], ['Gráfico', 'grafico: Título | a, b, c\nserie: Serie = 1, 2, 3'], ['QR', 'qr: https://…'], ['Nota', 'nota: lo que dices en este beat'], ['Nuevo beat', '--'], ['Beat que borra', '---'], ['Nueva escena', '== Título de la escena']];
 function pintaGuion() {
   $('sns').innerHTML = SN.map(([l], i) => `<button type="button" data-sn="${i}">${esc(t(l))}</button>`).join('');
@@ -2198,14 +2473,14 @@ function auditaOffline(h) {
   return {ok: !p.length, problemas: p, bytes: new Blob([h]).size};
 }
 const deckApp = c => ({...c, id: c.id + '-app'});   // canal propio: el escenario de la app y su presentador se sincronizan entre sí, no con otras copias exportadas
-const abrePres = () => { const r = compila(DECK); if (bloqueantes(ERR).length || r.errores.length) return toast(t('Corrige los errores del guion antes de seguir.')); const u = URL.createObjectURL(new Blob([exportaHtml(deckApp(r.deck))], {type: 'text/html'})); window.open(u, 'escenia-presentador', 'width=1280,height=800'); setTimeout(() => URL.revokeObjectURL(u), 60000); };
+const abrePres = () => { const r = compila(DECK, S.imgs); if (bloqueantes(ERR).length || bloqueantes(r.errores).length) return toast(t('Corrige los errores del guion antes de seguir.')); const u = URL.createObjectURL(new Blob([exportaHtml(deckApp(r.deck))], {type: 'text/html'})); window.open(u, 'escenia-presentador', 'width=1280,height=800'); setTimeout(() => URL.revokeObjectURL(u), 60000); };
 
 /* ── 3 · escenario ── */
 function pintaEscenario() {
-  const r = reparsea(), c = compila(DECK), malos = [...bloqueantes(ERR), ...c.errores];
+  const r = reparsea(), c = compila(DECK, S.imgs), malos = [...bloqueantes(ERR), ...bloqueantes(c.errores)];
   if (!DECK.escenas.length || malos.length) { if (PLAYER) PLAYER.destruye(); PLAYER = null; PLAYER_ID = ''; $('stageHost').innerHTML = `<p class="empty">${esc(t('Corrige los errores del guion antes de ver el escenario.'))}</p>`; pintaVerif(); return; }
   const id = c.deck.id + '|' + (S.guion.length);
-  if (!PLAYER || PLAYER_ID !== id) { if (PLAYER) PLAYER.destruye(); PLAYER = escenaPlayer($('stageHost'), deckApp(c.deck), {barra: true, activo: () => step === 3, hash: false, abrePresentador: abrePres}); PLAYER_ID = id; }
+  if (!PLAYER || PLAYER_ID !== id) { if (PLAYER) PLAYER.destruye(); PLAYER = escenaPlayer($('stageHost'), deckApp(c.deck), {barra: true, activo: () => step === 4, hash: false, abrePresentador: abrePres}); PLAYER_ID = id; }
   else PLAYER.reescala();
   pintaVerif();
 }
@@ -2221,12 +2496,12 @@ async function verificaDeck(C) {
     orden.forEach((o, i) => { P.ir(o[0], o[1]); if (P.firma() !== fw[i]) res.directo.push(o); P.desbordes().forEach(d => res.desbordes.push(d)); });
     P.destruye();
     for (let i = 0; i < orden.length; i++) { await sleep(0); const Q = mk(orden[i]); if (Q.firma() !== fw[i]) res.recarga.push(orden[i]); Q.destruye(); }
-    res.offline = auditaOffline(exportaHtml(C));
+    res.offline = auditaOffline(exportaHtml(C)); res.sinImagen = escenasSinImagen(C);
   } finally { host.remove(); }
   return res;
 }
 $('btnVerifica').onclick = async () => {
-  const c = compila(DECK); if (!DECK.escenas.length || bloqueantes(ERR).length || c.errores.length) return toast(t('Corrige los errores del guion antes de seguir.'));
+  const c = compila(DECK, S.imgs); if (!DECK.escenas.length || bloqueantes(ERR).length || bloqueantes(c.errores).length) return toast(t('Corrige los errores del guion antes de seguir.'));
   $('btnVerifica').disabled = true; $('verifRes').innerHTML = '<span class="spin"></span>';
   try { VERIF = await verificaDeck(c.deck); } catch (e) { VERIF = {error: e.message}; }
   $('btnVerifica').disabled = false; pintaVerif();
@@ -2235,9 +2510,10 @@ const lista = a => a.map(o => (o[0] + 1) + '.' + o[1]).join(', ');
 function pintaVerif() {
   const v = VERIF, el = $('verifRes'); if (!v) { el.innerHTML = ''; return; } if (v.error) { el.textContent = v.error; return; }
   const chip = (ok, txt) => `<span class="fa-chip ${ok ? 'ok' : 'error'}">${ok ? '✓' : '✕'} ${esc(txt)}</span>`;
-  el.innerHTML = `<div class="fa-res">${chip(!v.recorrido.length, t('Hacia delante y hacia atrás: {0} fotogramas', v.estados))}${chip(!v.directo.length, t('Salto directo'))}${chip(!v.recarga.length, t('Recarga desde la dirección'))}${chip(!v.desbordes.length, t('Nada se sale del escenario'))}${chip(v.offline.ok, t('Sin referencias a la red'))}</div>` +
+  el.innerHTML = `<div class="fa-res">${chip(!v.recorrido.length, t('Hacia delante y hacia atrás: {0} fotogramas', v.estados))}${chip(!v.directo.length, t('Salto directo'))}${chip(!v.recarga.length, t('Recarga desde la dirección'))}${chip(!v.desbordes.length, t('Nada se sale del escenario'))}${chip(v.offline.ok, t('Sin referencias a la red'))}${chip(!v.sinImagen.length, t('Todas las escenas tienen imagen'))}</div>` +
     (v.recorrido.length || v.directo.length || v.recarga.length ? `<div class="aviso">${esc(t('Fotogramas distintos según el camino: {0}.', lista([...v.recorrido, ...v.directo, ...v.recarga])))}</div>` : '') +
     (v.desbordes.length ? `<div class="aviso">${esc(t('Se salen del escenario (escena.beat): {0}.', [...new Set(v.desbordes.map(d => (d.s + 1) + '.' + d.b))].join(', ')))}</div>` : '') +
+    (v.sinImagen.length ? `<div class="aviso">${esc(t('Escenas sin imagen: {0}.', v.sinImagen.map(i => i + 1).join(', ')))}</div>` : '') +
     (!v.offline.ok ? `<div class="aviso">${esc(t('La exportación hace referencia a la red: {0}.', v.offline.problemas.join(', ')))}</div>` : '');
 }
 
@@ -2253,19 +2529,21 @@ function pintaExportar() {
       (au.nuevas.length ? `<div class="aviso">${esc(t('Cifras que no están en tu material: {0}.', au.nuevas.map(x => x.s + '.' + x.b + ' → ' + x.nums.join(', ')).join(' · ')))}</div>` : '') +
       (au.sinCubrir.length ? `<p class="help" style="margin:10px 0 2px">${esc(t('Frases del material que ningún beat cubre (posible contenido perdido):'))}</p><ul class="fa-lista">${au.sinCubrir.slice(0, 6).map(f => `<li>${esc(f.slice(0, 160))}</li>`).join('')}</ul>` : '');
   }
-  const c = compila(DECK), ok = DECK.escenas.length && !bloqueantes(ERR).length && !c.errores.length;
+  const c = compila(DECK, S.imgs), ok = DECK.escenas.length && !bloqueantes(ERR).length && !bloqueantes(c.errores).length;
   $('offRes').innerHTML = ok ? (() => { const o = auditaOffline(exportaHtml(c.deck)); return `<span class="fa-chip ${o.ok ? 'ok' : 'error'}">${o.ok ? '✓' : '✕'} ${esc(o.ok ? t('Sin referencias a la red · {0} KB', nf(o.bytes / 1024)) : t('La exportación hace referencia a la red: {0}.', o.problemas.join(', ')))}</span>`; })() : `<span class="help">${esc(t('Corrige los errores del guion antes de exportar.'))}</span>`;
 }
-const listoParaExportar = () => { const c = compila(DECK); if (!DECK.escenas.length || bloqueantes(ERR).length || c.errores.length) { toast(t('Corrige los errores del guion antes de seguir.')); return null; } return c; };
+const listoParaExportar = () => { const c = compila(DECK, S.imgs); if (!DECK.escenas.length || bloqueantes(ERR).length || bloqueantes(c.errores).length) { toast(t('Corrige los errores del guion antes de seguir.')); return null; } return c; };
 $('btnHtml').onclick = () => { reparsea(); const c = listoParaExportar(); if (c) dl(nombreFichero('.html'), exportaHtml(c.deck), 'text/html;charset=utf-8'); };
 $('btnTxt').onclick = () => { if (!S.guion.trim()) return toast(t('Aún no hay guion.')); dl(nombreFichero('.txt'), S.guion, 'text/plain;charset=utf-8'); };
-$('btnJson').onclick = () => { if (!S.guion.trim()) return toast(t('Aún no hay guion.')); dl(nombreFichero('.escenia.json'), JSON.stringify({formato: 'escenia/1', app: APP_NAME, inspiradaEn: 'github.com/borjaperfra/beatdeck', titulo: DECK.titulo, idioma: DECK.idioma, guion: S.guion}, null, 1), 'application/json'); };
+$('btnJson').onclick = () => { if (!S.guion.trim()) return toast(t('Aún no hay guion.')); dl(nombreFichero('.escenia.json'), JSON.stringify({formato: 'escenia/1', app: APP_NAME, inspiradaEn: 'github.com/borjaperfra/beatdeck', titulo: DECK.titulo, idioma: DECK.idioma, guion: S.guion, imagenes: imgsUsadas()}, null, 1), 'application/json'); };
 const resumenBloque = bl => ({afirmacion: () => `${t('Afirmación')}: ${bl.texto}`, texto: () => `${t('Texto')}: ${bl.texto}`, tacha: () => t('Tachar') + (bl.texto ? ': ' + bl.texto : ''), maquina: () => `${t('Se escribe')}: ${bl.texto}`, contador: () => `${t('Contador')}: ${bl.desde} → ${bl.hasta}${bl.sufijo ? ' ' + bl.sufijo : ''} ${bl.etiqueta}`, terminal: () => `${t('Terminal')}: ${bl.lineas.map(l => l.texto).join(' / ')}`, nodo: () => `${t('Diagrama')}: ${bl.texto}`, flecha: () => `${t('Diagrama')}: ${bl.de} → ${bl.a}`, grafico: () => `${t('Gráfico')}: ${bl.titulo}`, serie: () => `${t('Gráfico')}: ${bl.nombre} = ${bl.valores.join(', ')}`, qr: () => `QR: ${bl.texto}`}[bl.k] || (() => bl.k))();
 $('btnWord').onclick = async () => {
   reparsea(); if (!DECK.escenas.length) return toast(t('Aún no hay guion.'));
   const au = auditaContenido(DECK, S.material), est = (s2, b2) => (au.beats.find(x => x.s === s2 && x.b === b2) || {}).estado;
   const md = DECK.escenas.map((e, i) => `## ${i + 1}. ${e.titulo}\n` + e.beats.map((b2, j) => `### ${t('Beat {0}', j + 1)}${est(i + 1, j + 1) === 'sin' ? ' ⚠' : ''}\n${b2.bloques.map(bl => '- ' + resumenBloque(bl)).join('\n')}\n${b2.nota ? '\n' + t('Notas') + ': ' + b2.nota + '\n' : ''}${b2.fuente ? '\n' + t('Cita del material') + ': «' + b2.fuente + '»\n' : ''}`).join('\n')).join('\n');
-  try { dl(nombreFichero('.docx'), await wordDeMarkdown(md, {titulo: DECK.titulo || APP_NAME, subtitulo: [DECK.autor, new Date().toLocaleDateString(locale())].filter(Boolean).join(' · '), pie: t('Generado con {0}. Inspirada en beatdeck (github.com/borjaperfra/beatdeck).', APP_NAME)})); } catch (e) { toast(e.message, 7000); }
+  const creditos = DECK.escenas.map((e, i) => { const id = e.beats.flatMap(b => b.bloques).find(x => x.k === 'imagen'); const im = id && S.imgs[id.id]; return im ? `- ${t('Escena {0}', i + 1)}: ${creditoTxt(im)}${im.u ? ' (' + im.u + ')' : ''}` : ''; }).filter(Boolean);
+  const md2 = md + (creditos.length ? `\n\n## ${t('Créditos de las imágenes')}\n${creditos.join('\n')}\n` : '');
+  try { dl(nombreFichero('.docx'), await wordDeMarkdown(md2, {titulo: DECK.titulo || APP_NAME, subtitulo: [DECK.autor, new Date().toLocaleDateString(locale())].filter(Boolean).join(' · '), pie: t('Generado con {0}. Inspirada en beatdeck (github.com/borjaperfra/beatdeck).', APP_NAME)})); } catch (e) { toast(e.message, 7000); }
 };
 $('fileImp').onchange = async e => {
   const f = e.target.files[0]; if (!f) return; e.target.value = '';
@@ -2274,12 +2552,173 @@ $('fileImp').onchange = async e => {
     if (/\.json$/i.test(f.name)) { const j = JSON.parse(tx); if (!j || j.formato !== 'escenia/1' || typeof j.guion !== 'string') throw new Error(t('Ese .json no es un proyecto de EscenIA.')); g = j.guion; }
     if (!parseGuion(g).deck.escenas.length) throw new Error(t('No se encontró ninguna escena en ese fichero.'));
     if (S.guion.trim() && !confirm(t('Esto sustituye el guion actual. ¿Continuar?'))) return;
-    S.guion = g; S.esEjemplo = false; VERIF = null; await guardaYa(); toast(t('Guion importado')); go(2);
+    S.guion = g; S.esEjemplo = false; VERIF = null; S.imgs = {}; if (/\.json$/i.test(f.name)) S.imgs = imgsSaneadas(JSON.parse(tx).imagenes); limpiaImgs(); await guardaYa(); toast(t('Guion importado')); go(2);
   } catch (err) { toast(err.message, 7000); }
 };
 
+
+/* ══ 3 · aspecto: colores e imágenes por escena ══ */
+const creditoTxt = im => im.k === 'ia' ? t('Generada con IA ({0})', im.m || '—') : im.k === 'libre' ? [im.a, im.l, 'Wikimedia Commons'].filter(Boolean).join(' · ') : im.k === 'ej' ? t('Ilustración de ejemplo') : t('Imagen propia');
+function limpiaImgs() { const usados = new Set(idsImagenes(S.guion)); Object.keys(S.imgs).forEach(k => { if (!usados.has(k)) delete S.imgs[k]; }); }
+const imgsUsadas = () => { limpiaImgs(); return {...S.imgs}; };
+function imgsSaneadas(o) {   // un .json importado es un dato no fiable: solo imágenes reales y campos acotados
+  const r = {}; if (!o || typeof o !== 'object') return r;
+  Object.entries(o).slice(0, 40).forEach(([id, im]) => {
+    if (!/^[A-Za-z0-9_-]{3,32}$/.test(id) || !im || typeof im.d !== 'string' || !/^data:image\/(jpeg|png|webp|svg\+xml)[;,]/.test(im.d) || im.d.length > 4e6) return;
+    r[id] = {d: im.d, k: ['ia', 'libre', 'propia', 'ej'].includes(im.k) ? im.k : 'propia', a: String(im.a || '').slice(0, 80), l: String(im.l || '').slice(0, 40), m: String(im.m || '').slice(0, 60), u: /^https:\/\/commons\.wikimedia\.org\//.test(im.u || '') ? im.u : ''};
+  });
+  return r;
+}
+function cambiaAspecto(refrescaInputs) { S.esEjemplo = false; VERIF = null; guarda(); reparsea(); pintaColores(refrescaInputs); pintaImgs(); }
+
+/* colores */
+const PRESETS = [{n: 'Oscuro', tema: 'oscuro', ac: '#E4572E'}, {n: 'Claro', tema: 'claro', ac: '#E4572E'}, {n: 'Azul noche', f: '#0F2237', x: '#EAF1F8', ac: '#4CC9B0'}, {n: 'Papel cálido', f: '#FFF8E7', x: '#2B2118', ac: '#C2410C'}, {n: 'Verde bosque', f: '#10231C', x: '#E8F3EC', ac: '#E0A526'}, {n: 'Alto contraste', f: '#000000', x: '#FFFFFF', ac: '#FFD400'}];
+function aplicaPreset(i) {
+  const p = PRESETS[i]; S.guion = setMeta(S.guion, 'fondo', p.f || ''); S.guion = setMeta(S.guion, 'texto', p.x || ''); S.guion = setMeta(S.guion, 'acento', p.ac);
+  S.guion = setMeta(S.guion, 'tema', p.tema || (lumRel(p.f) < .4 ? 'oscuro' : 'claro')); cambiaAspecto(true);
+}
+function pintaColores(refresca) {
+  const ef = coloresEfectivos(DECK), ac = DECK.acento, cr = contraste(ef.bg, ef.fg), fmtN = x => x.toFixed(1).replace('.', LANG === 'en' ? '.' : ',');
+  if (refresca) { $('colFondo').value = ef.bg.toLowerCase(); $('colTexto').value = ef.fg.toLowerCase(); $('colAcento').value = ac.toLowerCase(); }
+  $('presets').innerHTML = PRESETS.map((p, i) => { const tm = TEMA_COL[p.tema] || {}; return `<button type="button" data-p="${i}"><i style="background:${p.f || tm.bg}"></i><i style="background:${p.x || tm.fg}"></i><i style="background:${p.ac}"></i>${esc(t(p.n))}</button>`; }).join('');
+  $('colPrev').style.background = ef.bg; $('colPrev').style.color = ef.fg; $('colPrev').innerHTML = `<b>Aa</b><span>${esc(t('Texto de ejemplo'))}</span><i style="background:${esc(ac)}"></i>`;
+  $('colInfo').innerHTML = `<span class="fa-chip ${cr >= 4.5 ? 'ok' : 'aviso'}">${esc(t('Contraste texto/fondo: {0}:1', fmtN(cr)))}</span> ` + (cr < 4.5 ? `<span class="help">${esc(t('Contraste bajo: se lee mal desde lejos. Se recomienda 4,5:1 o más.'))}</span>` : '') + (contraste(ef.bg, ac) < 3 ? `<span class="help">${esc(t('El color de acento casi no se distingue del fondo.'))}</span>` : '');
+}
+$('presets').onclick = e => { const b2 = e.target.closest('[data-p]'); if (b2) aplicaPreset(+b2.dataset.p); };
+$('colFondo').oninput = e => { S.guion = setMeta(S.guion, 'fondo', e.target.value.toUpperCase()); cambiaAspecto(); };
+$('colTexto').oninput = e => { S.guion = setMeta(S.guion, 'texto', e.target.value.toUpperCase()); cambiaAspecto(); };
+$('colAcento').oninput = e => { S.guion = setMeta(S.guion, 'acento', e.target.value.toUpperCase()); cambiaAspecto(); };
+$('btnColReset').onclick = () => { S.guion = setMeta(setMeta(S.guion, 'fondo', ''), 'texto', ''); cambiaAspecto(true); };
+
+/* imágenes: IA (el modelo más barato del proveedor), imagen libre (Wikimedia Commons) o la tuya */
+const IMG_MODELOS = {openai: ['gpt-image-1-mini', 'gpt-image-2'], gemini: ['gemini-3.1-flash-lite-image', 'gemini-3.1-flash-image']};
+const imgModelo = () => (S.imgCfg.modelo[S.imgCfg.prov] || IMG_DEF[S.imgCfg.prov]);
+const imagenDeEscena = si => { const bl = (DECK.escenas[si] ? DECK.escenas[si].beats : []).flatMap(b => b.bloques).find(x => x.k === 'imagen'); return bl ? {id: bl.id, modo: bl.modo, im: S.imgs[bl.id]} : null; };
+function pintaImgs() {
+  const c = S.imgCfg, falta = escenasSinImagen(DECK);
+  $('imgOrigen').innerHTML = [['ia', 'Generar con IA'], ['libre', 'Imagen libre (Wikimedia Commons)']].map(([v, l]) => `<option value="${v}"${c.origen === v ? ' selected' : ''}>${esc(t(l))}</option>`).join('');
+  $('imgProv').innerHTML = ['openai', 'gemini'].map(v => `<option value="${v}"${c.prov === v ? ' selected' : ''}>${esc(PROV[v].n)}</option>`).join('');
+  $('imgModelos').innerHTML = (IMG_MODELOS[c.prov] || []).map(m => `<option value="${esc(m)}">`).join('');
+  if ($('imgModelo') !== document.activeElement) $('imgModelo').value = imgModelo();
+  if ($('imgEstilo') !== document.activeElement) $('imgEstilo').value = c.estilo || '';
+  if ($('imgPrecio') !== document.activeElement) $('imgPrecio').value = c.precio || '';
+  $('imgIA').classList.toggle('hidden', c.origen !== 'ia');
+  $('btnImgTodas').disabled = !falta.length || busy; $('btnImgTodasTxt').textContent = falta.length ? t('Completar las {0} escenas sin imagen', falta.length) : t('Todas las escenas tienen imagen');
+  $('imgLista').innerHTML = !DECK.escenas.length ? `<p class="empty">${esc(t('Aún no hay escenas. Empieza con «== Título».'))}</p>` : DECK.escenas.map((e, i) => { const d = imagenDeEscena(i), ok = d && d.im;
+    return `<div class="im-row" data-s="${i}"><div class="im-th">${ok ? `<img src="${esc(d.im.d)}" alt="">` : '<span>▨</span>'}</div><div class="im-m"><b>${i + 1} · ${esc(e.titulo || '—')}</b><small>${ok ? esc(creditoTxt(d.im)) : esc(d && !ok ? t('Falta el fichero de la imagen') : t('Sin imagen'))}</small><div class="im-bt"><button type="button" data-act="gen">${esc(t('Generar con IA'))}</button><button type="button" data-act="buscar">${esc(t('Buscar imagen libre'))}</button><button type="button" data-act="subir">${esc(t('Subir la mía'))}</button>${d ? `<button type="button" data-act="quitar">${esc(t('Quitar'))}</button><select data-act="modo" aria-label="${esc(t('Disposición'))}"><option value="lado"${d.modo === 'lado' ? ' selected' : ''}>${esc(t('Imagen lateral'))}</option><option value="fondo"${d.modo === 'fondo' ? ' selected' : ''}>${esc(t('Imagen de fondo'))}</option></select>` : ''}</div></div></div>`; }).join('');
+}
+function pintaAspecto() { reparsea(); pintaColores(true); pintaImgs(); }
+$('imgOrigen').onchange = e => { S.imgCfg.origen = e.target.value; guarda(); pintaImgs(); };
+$('imgProv').onchange = e => { S.imgCfg.prov = e.target.value; guarda(); pintaImgs(); };
+$('imgModelo').oninput = e => { S.imgCfg.modelo[S.imgCfg.prov] = e.target.value.trim() || IMG_DEF[S.imgCfg.prov]; guarda(); };
+$('imgEstilo').oninput = e => { S.imgCfg.estilo = e.target.value; guarda(); };
+$('imgPrecio').oninput = e => { S.imgCfg.precio = e.target.value; guarda(); };
+function poneImagen(si, img, modo) {
+  const id = uid('i'); S.imgs[id] = img; S.guion = guionConImagen(S.guion, si, id, modo || 'lado'); limpiaImgs(); S.esEjemplo = false; VERIF = null; guarda(); reparsea();
+}
+$('imgLista').onclick = e => {
+  const b2 = e.target.closest('button[data-act]'); if (!b2) return; const si = +b2.closest('[data-s]').dataset.s, act = b2.dataset.act;
+  if (act === 'quitar') { S.guion = guionConImagen(S.guion, si, null); limpiaImgs(); cambiaAspecto(); }
+  else if (busy) toast(t('Espera a que termine la operación en curso.'));
+  else if (act === 'gen') imagenIA([si]); else if (act === 'buscar') abreBuscador(si);
+  else if (act === 'subir') { $('fileImgEsc').dataset.s = si; $('fileImgEsc').click(); }
+};
+$('imgLista').onchange = e => { const sel = e.target.closest('select[data-act="modo"]'); if (!sel) return; const si = +sel.closest('[data-s]').dataset.s, d = imagenDeEscena(si); if (d) { S.guion = guionConImagen(S.guion, si, d.id, sel.value); cambiaAspecto(); } };
+$('fileImgEsc').onchange = async e => {
+  const f = e.target.files[0], si = +e.target.dataset.s; e.target.value = ''; if (!f) return;
+  try { if (!/^image\//.test(f.type)) throw new Error(t('Ese fichero no es una imagen.')); const d = await reduceImg(await dataUrl(f)), p = imagenDeEscena(si); poneImagen(si, {d, k: 'propia'}, p ? p.modo : 'lado'); await guardaYa(); pintaImgs(); toast(t('Usa solo imágenes sobre las que tengas derechos.'), 6000); }
+  catch (err) { toast(err.message, 7000); }
+};
+$('btnImgTodas').onclick = () => { if (busy) return; const falta = escenasSinImagen(DECK); if (!falta.length) return; (S.imgCfg.origen === 'ia' ? imagenIA : imagenLibreAuto)(falta); };
+
+/* IA de imágenes: el proveedor devuelve la imagen; se reduce a ≤1280 px y se incrusta (la charla exportada no depende de la red) */
+const imgErr = (st, tx, pv, mod) => /moderation|safety|content_policy|blocked|PROHIBITED/i.test(tx) ? new Error(t('El proveedor rechazó esa imagen por su política de contenido. Cambia el título o el estilo.')) : httpErr(st, tx, pv, mod);
+async function generaImagen(prov, modelo, prompt, modo) {
+  const key = getKey(prov);
+  if (prov === 'openai') {
+    const body = {model: modelo, prompt, n: 1, size: modo === 'fondo' ? '1536x1024' : '1024x1536', quality: 'low', output_format: 'jpeg'}, llama = () => conReintentos(() => fetch('https://api.openai.com/v1/images/generations', {method: 'POST', headers: {'Content-Type': 'application/json', Authorization: 'Bearer ' + key}, body: JSON.stringify(body)}), prov);
+    let r = await llama(), tx = await r.text();
+    if (!r.ok && r.status === 400 && /quality|output_format|unknown parameter|unsupported/i.test(tx)) { delete body.quality; delete body.output_format; r = await llama(); tx = await r.text(); }
+    if (!r.ok) throw imgErr(r.status, tx, prov, modelo);
+    let j; try { j = JSON.parse(tx); } catch { j = {}; } const it = j.data && j.data[0];
+    if (!it || !it.b64_json) throw new Error(t('La IA no devolvió ninguna imagen.'));
+    return reduceImg('data:image/' + (body.output_format ? 'jpeg' : 'png') + ';base64,' + it.b64_json);
+  }
+  const body = {contents: [{parts: [{text: prompt}]}], generationConfig: {responseModalities: ['IMAGE'], imageConfig: {aspectRatio: modo === 'fondo' ? '16:9' : '3:4'}}}, llama = () => conReintentos(() => fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelo)}:generateContent`, {method: 'POST', headers: {'Content-Type': 'application/json', 'x-goog-api-key': key}, body: JSON.stringify(body)}), prov);
+  let r = await llama(), tx = await r.text();
+  if (!r.ok && r.status === 400 && /imageConfig|aspectRatio|unknown name/i.test(tx)) { delete body.generationConfig.imageConfig; r = await llama(); tx = await r.text(); }
+  if (!r.ok) throw imgErr(r.status, tx, prov, modelo);
+  let j; try { j = JSON.parse(tx); } catch { j = {}; } const partes = (j.candidates && j.candidates[0] && j.candidates[0].content && j.candidates[0].content.parts) || [], p = partes.find(x => x.inlineData || x.inline_data), idat = p && (p.inlineData || p.inline_data);
+  if (!idat || !idat.data) throw (j.promptFeedback && j.promptFeedback.blockReason) ? imgErr(400, 'blocked', prov, modelo) : new Error(t('La IA no devolvió ninguna imagen.'));
+  return reduceImg(`data:${idat.mimeType || idat.mime_type || 'image/png'};base64,${idat.data}`);
+}
+function pideClaveImg(prov) { localStorage.setItem(APP + '_prov', prov); if ($('mIA')) { cargaIA(); $('mIA').classList.add('on'); } toast(t('Pega tu clave de {0} para generar imágenes.', PROV[prov].n)); }
+async function imagenIA(lista) {
+  const c = S.imgCfg, prov = c.prov, modelo = imgModelo(); if (busy || !lista.length) return;
+  if (!getKey(prov)) return pideClaveImg(prov);
+  reparsea(); const prompts = lista.map(si => scrub(promptEscena(DECK, si, c.estilo)).t), precio = parseFloat(String(c.precio).replace(',', '.'));
+  const info = `<p class="sub" style="margin-top:0">${esc(t('Se generarán {0} imágenes con {1} ({2}). Cada una es una llamada de pago a tu cuenta.', lista.length, PROV[prov].n, modelo))}${precio > 0 ? ' ' + esc(t('Coste estimado: {0} (según el precio por imagen que has indicado).', (precio * lista.length).toFixed(3).replace('.', LANG === 'en' ? '.' : ','))) : ''}</p><p class="help">${esc(t('Se envían el título y las ideas de cada diapositiva, no tu material completo.'))}</p><p class="help">${esc(t('Muestra del envío:'))}</p>`;
+  if (!(await confirmaEnvio(info, prompts.map((p, i) => `[${lista[i] + 1}] ${p}`).join('\n\n'), 'img'))) return;
+  busy = true; pintaImgs(); let hechas = 0;
+  try {
+    for (let i = 0; i < lista.length; i++) {
+      $('imgEstado').innerHTML = '<span class="spin"></span> ' + esc(t('Generando imagen {0} de {1}…', i + 1, lista.length));
+      const p = imagenDeEscena(lista[i]), modo = p ? p.modo : 'lado', d = await generaImagen(prov, modelo, prompts[i], modo);
+      poneImagen(lista[i], {d, k: 'ia', m: modelo}, modo); hechas++; await guardaYa(); pintaImgs();
+    }
+    $('imgEstado').textContent = t('{0} imágenes generadas con {1}. Revísalas: la IA puede equivocarse.', hechas, modelo);
+  } catch (e) { $('imgEstado').textContent = e.message; toast(e.message, 8000); }
+  finally { busy = false; pintaImgs(); }
+}
+
+/* imagen libre: Wikimedia Commons (solo licencias libres; la atribución se muestra en la propia diapositiva) */
+const LIC_OK = /^(CC0|Public domain|PD[ -]|CC[ -]BY(?![ -]N)(?:[ -]SA)?[ -]?\d)/i;
+async function buscaCommons(q) {
+  const url = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({action: 'query', generator: 'search', gsrsearch: q + ' filetype:bitmap', gsrnamespace: '6', gsrlimit: '24', prop: 'imageinfo', iiprop: 'url|extmetadata|size|mime', iiurlwidth: '640', iiextmetadatafilter: 'LicenseShortName|Artist|Restrictions', format: 'json', formatversion: '2', origin: '*'});
+  let r; try { r = await fetch(url); } catch { throw new Error(t('No hay conexión con Wikimedia Commons.')); } if (!r.ok) throw new Error('Wikimedia Commons ' + r.status);
+  const j = await r.json(), pags = ((j.query && j.query.pages) || []).slice().sort((a, b) => (a.index || 0) - (b.index || 0));
+  return pags.map(p => {
+    const ii = p.imageinfo && p.imageinfo[0]; if (!ii) return null; const md = ii.extmetadata || {}, lic = limpiaLinea((md.LicenseShortName || {}).value);
+    if (!LIC_OK.test(lic) || String((md.Restrictions || {}).value || '').trim() || !/^image\/(jpeg|png|webp)$/.test(ii.mime) || (ii.width || 0) < 800 || !ii.thumburl) return null;
+    const autor = limpiaLinea(new DOMParser().parseFromString(String((md.Artist || {}).value || ''), 'text/html').body.textContent).slice(0, 60);   // documento inerte: no ejecuta ni descarga nada
+    return {titulo: String(p.title || '').replace(/^File:/, '').replace(/\.[a-z]+$/i, '').slice(0, 80), thumb: ii.thumburl, pagina: ii.descriptionurl || '', autor: autor || 'Wikimedia Commons', lic};
+  }).filter(Boolean).slice(0, 12);
+}
+const blobDe = async u => { const r = await fetch(u); if (!r.ok) throw new Error('Wikimedia Commons ' + r.status); return r.blob(); };
+const imgDeCand = async c => ({d: await reduceImg(await dataUrl(await (c.blobP || (c.blobP = blobDe(c.thumb))))), k: 'libre', a: c.autor, l: c.lic, u: c.pagina});
+async function imagenLibreAuto(lista) {
+  if (busy || !lista.length) return; reparsea(); const qs = lista.map(si => consultaEscena(DECK, si));
+  if (!(await confirmaEnvio(`<p class="sub" style="margin-top:0">${esc(t('Se enviarán estas búsquedas a Wikimedia Commons (no se envía nada más).'))}</p><p class="help">${esc(t('Muestra del envío:'))}</p>`, qs.map((q, i) => `[${lista[i] + 1}] ${q}`).join('\n'), 'img'))) return;
+  busy = true; pintaImgs(); const sin = [];
+  try {
+    for (let i = 0; i < lista.length; i++) {
+      $('imgEstado').innerHTML = '<span class="spin"></span> ' + esc(t('Buscando imagen {0} de {1}…', i + 1, lista.length));
+      const cs = await buscaCommons(qs[i]); if (!cs.length) { sin.push(lista[i] + 1); continue; }
+      const p = imagenDeEscena(lista[i]); poneImagen(lista[i], await imgDeCand(cs[0]), p ? p.modo : 'lado'); await guardaYa(); pintaImgs();
+    }
+    $('imgEstado').textContent = sin.length ? t('Sin resultado con licencia libre para las escenas: {0}. Prueba a buscar con otras palabras.', sin.join(', ')) : t('Imágenes libres añadidas. Revísalas y cambia las que no encajen.');
+  } catch (e) { $('imgEstado').textContent = e.message; toast(e.message, 8000); }
+  finally { busy = false; pintaImgs(); }
+}
+let CANDS = [], CAND_SI = 0;
+function abreBuscador(si) { CAND_SI = si; CANDS = []; $('imgQ').value = consultaEscena(DECK, si); $('imgRes').innerHTML = ''; $('imgBusEstado').textContent = ''; $('mImg').classList.add('on'); buscaYMuestra(); }
+async function buscaYMuestra() {
+  const q = $('imgQ').value.trim(); if (!q) return; $('imgBusEstado').innerHTML = '<span class="spin"></span> ' + esc(t('Buscando…')); $('imgRes').innerHTML = '';
+  try {
+    CANDS = await buscaCommons(q); $('imgBusEstado').textContent = CANDS.length ? t('{0} imágenes con licencia libre. Elige una:', CANDS.length) : t('Sin resultados con licencia libre. Prueba con otras palabras.');
+    $('imgRes').innerHTML = CANDS.map((c, i) => `<button type="button" class="fa-cand" data-i="${i}"><span class="fa-cimg"></span><small>${esc(c.autor)} · ${esc(c.lic)}</small></button>`).join('');
+    CANDS.forEach((c, i) => { c.blobP = blobDe(c.thumb); c.blobP.then(b => { const el = $('imgRes').querySelector(`[data-i="${i}"] .fa-cimg`); if (el) el.innerHTML = `<img src="${URL.createObjectURL(b)}" alt="${esc(c.titulo)}">`; }).catch(() => {}); });
+  } catch (e) { $('imgBusEstado').textContent = e.message; }
+}
+$('btnImgQ').onclick = buscaYMuestra; $('imgQ').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); buscaYMuestra(); } });
+$('imgRes').onclick = async e => {
+  const b2 = e.target.closest('[data-i]'); if (!b2) return; const c = CANDS[+b2.dataset.i]; if (!c) return;
+  try { const p = imagenDeEscena(CAND_SI); poneImagen(CAND_SI, await imgDeCand(c), p ? p.modo : 'lado'); await guardaYa(); $('mImg').classList.remove('on'); pintaImgs(); toast(t('Imagen añadida: {0}', creditoTxt(S.imgs[imagenDeEscena(CAND_SI).id]))); }
+  catch (err) { $('imgBusEstado').textContent = err.message; }
+};
+
 /* ── arranque ── */
-(async () => { const p = await cargaEstado(); if (p) S = {...S, ...p}; iniciaUI(); if (S.esEjemplo) aplicaEjemplo(); go(0); })();
+(async () => { const p = await cargaEstado(); if (p) S = {...S, ...p, imgCfg: {...S.imgCfg, ...(p.imgCfg || {}), modelo: {...IMG_DEF, ...((p.imgCfg || {}).modelo || {})}}, imgs: p.imgs || {}}; iniciaUI(); if (S.esEjemplo) aplicaEjemplo(); go(0); })();
 
 </script>
 </body></html>
